@@ -1,23 +1,28 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 import MainLayout from "./Layout/MainLayout";
+import { lazy, Suspense } from "react";
+import Loading from "./Components/Loading";
 
-import Home from "./pages/Home";
-import About from "./pages/About";
-import Service from "./pages/Service";
-import Contact from "./pages/Contact";
+const Home = lazy(() => import("./pages/Home"));
+const About = lazy(() => import("./pages/About"));
+const Service = lazy(() => import("./pages/Service"));
+const Contact = lazy(() => import("./pages/Contact"));
+
 
 function App() {
   return (
     <BrowserRouter>
-      <Routes>
-        <Route element={<MainLayout />}>
-          <Route path="/" element={<Home />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/service" element={<Service />} />
-          <Route path="/contact" element={<Contact />} />
-        </Route>
-      </Routes>
+      <Suspense fallback={<Loading />}>
+        <Routes>
+          <Route element={<MainLayout />}>
+            <Route path="/" element={<Home />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/service" element={<Service />} />
+            <Route path="/contact" element={<Contact />} />
+          </Route>
+        </Routes>
+      </Suspense>
     </BrowserRouter>
   );
 }

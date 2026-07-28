@@ -47,11 +47,11 @@ function Footer() {
           <div className="col-lg-3 col-md-6 mb-4">
             <h5 className="text-warning">Our Services</h5>
             <ul className="list-unstyled">
-              <li>✔ Local Taxi</li>
-              <li>✔ Airport Pickup & Drop</li>
-              <li>✔ Outstation Trips</li>
-              <li>✔ Corporate Cab</li>
-              <li>✔ One Way Taxi</li>
+              <li>Local Taxi</li>
+              <li>Airport Pickup & Drop</li>
+              <li>Outstation Trips</li>
+              <li>Corporate Cab</li>
+              <li>One Way Taxi</li>
             </ul>
           </div>
 
