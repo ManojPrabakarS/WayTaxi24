@@ -1,30 +1,26 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
-import MainLayout from "./Layout/MainLayout";
-import { lazy, Suspense } from "react";
-import Loading from "./Components/Loading";
+import Navbar from "./components/Navbar";
+import Footer from "./components/Footer";
 
-const Home = lazy(() => import("./pages/Home"));
-const About = lazy(() => import("./pages/About"));
-const Service = lazy(() => import("./pages/Service"));
-const Contact = lazy(() => import("./pages/Contact"));
+import Home from "./pages/Home/Home";
+import About from "./pages/About/About";
+import Service from "./pages/Services/Service";
+import Contact from "./pages/Contact/Contact";
 
-
-function App() {
+export default function App() {
   return (
     <BrowserRouter>
-      <Suspense fallback={<Loading />}>
-        <Routes>
-          <Route element={<MainLayout />}>
-            <Route path="/" element={<Home />} />
-            <Route path="/about" element={<About />} />
-            <Route path="/service" element={<Service />} />
-            <Route path="/contact" element={<Contact />} />
-          </Route>
-        </Routes>
-      </Suspense>
+      <Navbar />
+
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/services" element={<Service />} />
+        <Route path="/contact" element={<Contact />} />
+      </Routes>
+
+      <Footer />
     </BrowserRouter>
   );
 }
-
-export default App;

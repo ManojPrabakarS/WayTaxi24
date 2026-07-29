@@ -1,9 +1,47 @@
 @import "tailwindcss";
 
-*{
-  margin: 0%;
-  border: 0%;
-  box-sizing: border-box;
+/* ================================
+   GLOBAL WEBSITE SETTINGS
+================================ */
+
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
 }
 
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Inter", "Poppins", Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #18181b;
+  background: #ffffff;
+}
 
+/* Remove Bootstrap/default heading margins */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin-top: 0;
+}
+
+/* Remove unwanted underline */
+a {
+  text-decoration: none !important;
+}
+
+a:hover {
+  text-decoration: none !important;
+}
+
+button,
+input,
+select,
+textarea {
+  font-family: inherit;
+}
