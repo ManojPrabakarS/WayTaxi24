@@ -77,8 +77,8 @@ export default function Home1() {
 
         {/* ================= HERO CONTENT ================= */}
 
-<div
-  className="
+        <div
+          className="
     w-full
     max-w-[650px]
     pt-2
@@ -87,11 +87,11 @@ export default function Home1() {
     md:pt-4
     lg:pt-5
   "
->
-  {/* BADGE */}
+        >
+          {/* BADGE */}
 
-  <div
-    className="
+          <div
+            className="
       inline-flex
       items-center
       gap-2
@@ -102,11 +102,11 @@ export default function Home1() {
       px-3
       py-1.5
     "
-  >
-    <FaCar className="text-[10px] text-yellow-400" />
+          >
+            <FaCar className="text-[10px] text-yellow-400" />
 
-    <span
-      className="
+            <span
+              className="
         text-[9px]
         font-bold
         uppercase
@@ -115,15 +115,15 @@ export default function Home1() {
 
         sm:text-[10px]
       "
-    >
-      All India Taxi Service
-    </span>
-  </div>
+            >
+              ONE WAY JOURNEY. ONE WAY FARE
+            </span>
+          </div>
 
-  {/* HEADING */}
+          {/* HEADING */}
 
-  <h1
-    className="
+          <h1
+            className="
       m-0
       mt-4
       font-['Poppins']
@@ -143,27 +143,27 @@ export default function Home1() {
 
       xl:text-[56px]
     "
-  >
-    Comfortable Rides,
-    <br />
+          >
+            Comfortable Rides,
+            <br />
 
-    Every Time,
-    <br />
+            Every Time,
+            <br />
 
-    <span className="!text-[#FBBF24]">
-      Every Mile.
-    </span>
-  </h1>
+            <span className="text-[#FBBF24]!">
+              Every Mile.
+            </span>
+          </h1>
 
-  {/* DESCRIPTION */}
+          {/* DESCRIPTION */}
 
-  <p
-    className="
+          <p
+            className="
       m-0
       mt-4
       max-w-[570px]
       font-['Poppins']
-      text-[11px]
+      text-[12px]
       font-normal
       leading-[18px]
       !text-gray-200
@@ -177,17 +177,17 @@ export default function Home1() {
       lg:text-[14px]
       lg:leading-[22px]
     "
-  >
-    Safe, reliable and affordable taxi service across India.
-    Travel
-    <br className="hidden sm:block" />
-    comfortably with professional drivers and well-maintained vehicles.
-  </p>
+          >
+            Safe, reliable and affordable taxi service across India.
+            Travel
+            <br className="hidden sm:block" />
+            comfortably with professional drivers and well-maintained vehicles.
+          </p>
 
-  {/* ================= HERO FEATURES ================= */}
+          {/* ================= HERO FEATURES ================= */}
 
-  <div
-    className="
+          <div
+            className="
       mt-4
       grid
       w-full
@@ -203,32 +203,32 @@ export default function Home1() {
 
       lg:mt-6
     "
-  >
-    <HeroFeature
-      icon={<FaShieldAlt />}
-      title="Best Price"
-      text="Guaranteed"
-    />
+          >
+            <HeroFeature
+              icon={<FaShieldAlt />}
+              title="Best Price"
+              text="Guaranteed"
+            />
 
-    <HeroFeature
-      icon={<FaUserCheck />}
-      title="Verified"
-      text="Drivers"
-    />
+            <HeroFeature
+              icon={<FaUserCheck />}
+              title="Verified"
+              text="Drivers"
+            />
 
-    <HeroFeature
-      icon={<FaCar />}
-      title="Clean & Safe"
-      text="Vehicles"
-    />
+            <HeroFeature
+              icon={<FaCar />}
+              title="Clean & Safe"
+              text="Vehicles"
+            />
 
-    <HeroFeature
-      icon={<FaHeadset />}
-      title="24/7"
-      text="Support"
-    />
-  </div>
-</div>
+            <HeroFeature
+              icon={<FaHeadset />}
+              title="24/7"
+              text="Support"
+            />
+          </div>
+        </div>
 
         {/* =================================================
             BOOKING BOX
@@ -251,7 +251,7 @@ export default function Home1() {
         >
           {/* ================= TRIP TYPES ================= */}
 
-          <div
+          {/* <div
             className="
               border-b
               border-gray-100
@@ -297,7 +297,7 @@ export default function Home1() {
                 Airport Transfer
               </TripButton>
             </div>
-          </div>
+          </div> */}
 
           {/* ================= BOOKING FORM ================= */}
 
@@ -491,8 +491,8 @@ export default function Home1() {
 
         {/* ================= TRUST CARDS ================= */}
 
-<div
-  className="
+        <div
+          className="
     mt-4
     grid
     w-full
@@ -508,31 +508,31 @@ export default function Home1() {
     sm:grid-cols-2
     lg:grid-cols-4
   "
->
-  <TrustCard
-    icon={<FaCar />}
-    title="Well Maintained Cabs"
-    text="Clean and comfortable vehicles for a smooth journey."
-  />
+        >
+          <TrustCard
+            icon={<FaCar />}
+            title="Well Maintained Cabs"
+            text="Clean and comfortable vehicles for a smooth journey."
+          />
 
-  <TrustCard
-    icon={<FaUserCheck />}
-    title="Verified Drivers"
-    text="Professional and experienced drivers for your safety."
-  />
+          <TrustCard
+            icon={<FaUserCheck />}
+            title="Verified Drivers"
+            text="Professional and experienced drivers for your safety."
+          />
 
-  <TrustCard
-    icon={<FaMapMarkerAlt />}
-    title="On Time Pickup"
-    text="Punctual pickup and timely drop for every booking."
-  />
+          <TrustCard
+            icon={<FaMapMarkerAlt />}
+            title="On Time Pickup"
+            text="Punctual pickup and timely drop for every booking."
+          />
 
-  <TrustCard
-    icon={<FaHeadset />}
-    title="24/7 Customer Support"
-    text="Our support team is available whenever you need us."
-  />
-</div>
+          <TrustCard
+            icon={<FaHeadset />}
+            title="24/7 Customer Support"
+            text="Our support team is available whenever you need us."
+          />
+        </div>
       </div>
     </section>
   );
@@ -565,10 +565,9 @@ function TripButton({ active, onClick, icon, children }) {
         sm:w-auto
         sm:min-w-[140px]
 
-        ${
-          active
-            ? "bg-yellow-400 !text-black"
-            : "bg-gray-100 !text-gray-700 hover:bg-yellow-50 hover:!text-yellow-600"
+        ${active
+          ? "bg-yellow-400 !text-black"
+          : "bg-gray-100 !text-gray-700 hover:bg-yellow-50 hover:!text-yellow-600"
         }
       `}
     >

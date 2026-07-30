@@ -143,7 +143,7 @@ export default function Footer(){
         <p className="text-gray-400 text-sm text-center">
           Designed & Developed by{" "}
           <span className="text-[#ffbd00] font-semibold">
-            Webniqo
+            Webniqo & MP
           </span>
         </p>
 
