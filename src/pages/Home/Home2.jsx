@@ -1,15 +1,13 @@
+import { useState } from "react";
+
 import {
   FaMapMarkerAlt,
-  FaExchangeAlt,
-  FaPlane,
-  FaClock,
-  FaArrowRight,
   FaUsers,
-  FaPhoneAlt,
-  FaWhatsapp,
-  FaTaxi,
-  FaChevronLeft,
-  FaChevronRight,
+  FaCalendarAlt,
+  FaClock,
+  FaCar,
+  FaArrowRight,
+  FaCheckCircle,
 } from "react-icons/fa";
 
 import sedan from "../../assets/4seater.png";
@@ -17,469 +15,566 @@ import creta from "../../assets/5seater.png";
 import innova from "../../assets/7seater.png";
 
 export default function Home2() {
-  const services = [
-    {
-      icon: <FaMapMarkerAlt />,
-      title: "One Way Taxi",
-      text: "Affordable one way drops",
-    },
-    {
-      icon: <FaExchangeAlt />,
-      title: "Round Trip",
-      text: "Travel more and back",
-    },
-    {
-      icon: <FaPlane />,
-      title: "Airport Transfer",
-      text: "On-time airport pick & drop",
-    },
-    {
-      icon: <FaClock />,
-      title: "Local Rental",
-      text: "Hourly & daily rental packages",
-    },
-  ];
+  const [selectedCab, setSelectedCab] = useState("SUV");
 
   const cars = [
     {
       image: sedan,
       name: "Sedan",
       seats: "4 Seats",
-      price: "₹ 12/km",
+      luggage: "2 Bags",
+      price: "₹12/km",
+      description: "Perfect for city rides & small families",
     },
     {
       image: creta,
       name: "SUV",
-      seats: "6 Seats",
-      price: "₹ 16/km",
+      seats: "5 Seats",
+      luggage: "3 Bags",
+      price: "₹16/km",
+      description: "Comfortable choice for family trips",
       popular: true,
     },
     {
       image: innova,
       name: "Innova",
       seats: "7 Seats",
-      price: "₹ 20/km",
+      luggage: "4 Bags",
+      price: "₹20/km",
+      description: "Ideal for groups & long journeys",
     },
   ];
 
-  const routes = [
-    { from: "Chennai", to: "Pondicherry", price: "₹ 1499" },
-    { from: "Chennai", to: "Vellore", price: "₹ 1299" },
-    { from: "Chennai", to: "Bangalore", price: "₹ 2799" },
-    { from: "Chennai", to: "Madurai", price: "₹ 2599" },
-    { from: "Chennai", to: "Trichy", price: "₹ 1799" },
-  ];
-
   return (
-    <section className="w-full bg-[#fafafa] py-6 sm:py-7 lg:py-8">
-      <div className="mx-auto w-full max-w-[1450px] px-4 sm:px-5 lg:px-7">
+    <section
+      className="
+        w-full
+        bg-[#f8f9fa]
+        py-8
+        sm:py-10
+        md:py-12
+        lg:py-14
+      "
+    >
+      <div
+        className="
+          mx-auto
+          w-full
+          max-w-[1440px]
+          px-4
+          sm:px-5
+          md:px-6
+          lg:px-8
+        "
+      >
+        {/* =====================================================
+            HEADING
+        ===================================================== */}
+
+        <div className="mx-auto max-w-[650px] text-center">
+          <span
+            className="
+              inline-flex
+              items-center
+              justify-center
+              rounded-full
+              bg-[#ffbd00]/15
+              px-3
+              py-1.5
+              text-[9px]
+              font-bold
+              uppercase
+              tracking-[1.3px]
+              !text-[#d99c00]
+
+              sm:px-4
+              sm:py-2
+              sm:text-[10px]
+            "
+          >
+            Quick & Easy Booking
+          </span>
+
+          <h2
+            className="
+              m-0
+              mt-3
+              font-['Poppins']
+              text-[24px]
+              font-bold
+              leading-[1.25]
+              !text-[#111]
+
+              sm:text-[28px]
+              md:text-[30px]
+              lg:text-[32px]
+            "
+          >
+            Plan Your Perfect Ride
+          </h2>
+
+          <p
+            className="
+              mx-auto
+              mb-0
+              mt-2
+              max-w-[520px]
+              px-2
+              font-['Poppins']
+              text-[10px]
+              leading-[17px]
+              !text-gray-500
+
+              sm:px-0
+              sm:text-[11px]
+              sm:leading-[19px]
+
+              md:text-[12px]
+            "
+          >
+            Enter your travel details, choose the right cab and enjoy a
+            comfortable journey with WayTaxi24.
+          </p>
+        </div>
 
         {/* =====================================================
-            TOP SECTION
+            BOOKING FORM
         ===================================================== */}
 
         <div
+          id="booking"
           className="
-            grid
-            grid-cols-1
-            gap-7
+            mt-6
+            overflow-hidden
+            rounded-xl
+            border
+            border-gray-200
+            bg-white
+            shadow-[0_8px_30px_rgba(0,0,0,0.06)]
 
-            lg:grid-cols-2
+            sm:mt-7
+            sm:rounded-2xl
 
-            xl:grid-cols-[1.18fr_1.18fr_.84fr]
-            xl:gap-5
+            lg:mt-8
           "
         >
+          {/* FORM HEADER */}
 
-          {/* =====================================================
-              SERVICES
-          ===================================================== */}
+          <div
+            className="
+              flex
+              flex-col
+              gap-3
+              border-b
+              border-gray-100
+              px-4
+              py-4
 
-          <div className="min-w-0">
-            <SectionTitle>Our Services</SectionTitle>
+              sm:px-5
 
-            <div className="mt-4 grid grid-cols-2 gap-3 sm:grid-cols-4">
-              {services.map((service, index) => (
-                <ServiceCard
-                  key={index}
-                  icon={service.icon}
-                  title={service.title}
-                  text={service.text}
-                />
-              ))}
-            </div>
-          </div>
+              md:flex-row
+              md:items-center
+              md:justify-between
+              md:gap-5
 
-          {/* =====================================================
-              CARS
-          ===================================================== */}
-
-          <div className="min-w-0">
-            <SectionTitle>Choose Your Cab</SectionTitle>
-
-            <div className="relative mt-4">
-
-              {/* LEFT ARROW */}
-
-              <button
-                type="button"
-                aria-label="Previous cars"
+              lg:px-6
+            "
+          >
+            <div>
+              <h3
                 className="
-                  absolute
-                  -left-[16px]
-                  top-1/2
-                  z-20
-                  hidden
-                  h-9
-                  w-9
-                  -translate-y-1/2
-                  items-center
-                  justify-center
-                  rounded-full
-                  border
-                  border-gray-200
-                  bg-white
-                  p-0
-                  text-[12px]
+                  m-0
+                  font-['Poppins']
+                  text-[14px]
+                  font-bold
                   !text-[#111]
-                  shadow-md
-                  transition-all
-                  hover:border-[#ffbd00]
-                  hover:!text-[#ffbd00]
-                  sm:flex
+
+                  sm:text-[15px]
+                  lg:text-[16px]
                 "
               >
-                <FaChevronLeft />
-              </button>
+                Tell Us About Your Trip
+              </h3>
 
-              {/* CAR CARDS */}
-
-              <div className="grid grid-cols-1 gap-3 min-[520px]:grid-cols-3">
-                {cars.map((car, index) => (
-                  <CarCard key={index} car={car} />
-                ))}
-              </div>
-
-              {/* RIGHT ARROW */}
-
-              <button
-                type="button"
-                aria-label="Next cars"
+              <p
                 className="
-                  absolute
-                  -right-[16px]
-                  top-1/2
-                  z-20
-                  hidden
-                  h-9
-                  w-9
-                  -translate-y-1/2
-                  items-center
-                  justify-center
-                  rounded-full
-                  border
-                  border-gray-200
-                  bg-white
-                  p-0
-                  text-[12px]
-                  !text-[#111]
-                  shadow-md
-                  transition-all
-                  hover:border-[#ffbd00]
-                  hover:!text-[#ffbd00]
-                  sm:flex
-                "
-              >
-                <FaChevronRight />
-              </button>
-            </div>
-          </div>
-
-          {/* =====================================================
-              ROUTES
-          ===================================================== */}
-
-          <div className="min-w-0 lg:col-span-2 xl:col-span-1">
-
-            <div className="flex items-center justify-between">
-              <SectionTitle>Popular Routes</SectionTitle>
-
-              <button
-                type="button"
-                className="
-                  border-0
-                  bg-transparent
-                  p-0
+                  m-0
+                  mt-1
                   text-[11px]
-                  font-semibold
-                  !text-[#333]
-                  transition-colors
-                  hover:!text-[#ffbd00]
+                  leading-[15px]
+                  !text-gray-500
+
+                  sm:text-[11px]
                 "
               >
-                View All
-              </button>
+                Fill in your travel details to find the right cab.
+              </p>
             </div>
 
             <div
               className="
-                mt-4
-                grid
-                grid-cols-1
+                flex
+                items-center
                 gap-2
+                text-[9px]
+                font-medium
+                !text-gray-500
 
-                sm:grid-cols-2
-
-                xl:grid-cols-1
+                sm:text-[10px]
               "
             >
-              {routes.map((route, index) => (
-                <RouteCard key={index} route={route} />
-              ))}
+              <FaCheckCircle className="shrink-0 !text-[#ffbd00]" />
+
+              <span>Quick booking in less than a minute</span>
+            </div>
+          </div>
+
+          {/* =====================================================
+              FORM FIELDS
+          ===================================================== */}
+
+          <div
+            className="
+              grid
+              grid-cols-1
+              gap-4
+              p-3
+
+              sm:grid-cols-2
+              sm:p-5
+
+              lg:gap-4
+              lg:p-6
+
+              xl:grid-cols-12
+              xl:items-end
+              xl:gap-3
+            "
+          >
+            {/* PICKUP */}
+
+            <div className="xl:col-span-3">
+              <FormLabel>Pickup Location</FormLabel>
+
+              <div className="home2-field">
+                <FaMapMarkerAlt className="shrink-0 text-[13px] !text-[#ffbd00]" />
+
+                <input
+                  type="text"
+                  placeholder="Enter pickup location"
+                  className="home2-input"
+                />
+              </div>
+            </div>
+
+            {/* DROP */}
+
+            <div className="xl:col-span-3">
+              <FormLabel>Drop Location</FormLabel>
+
+              <div className="home2-field">
+                <FaMapMarkerAlt className="shrink-0 text-[13px] !text-[#ffbd00]" />
+
+                <input
+                  type="text"
+                  placeholder="Enter drop location"
+                  className="home2-input"
+                />
+              </div>
+            </div>
+
+            {/* DATE */}
+
+            <div className="xl:col-span-2">
+              <FormLabel>Journey Date</FormLabel>
+
+              <div className="home2-field">
+                <FaCalendarAlt className="shrink-0 text-[12px] !text-[#ffbd00]" />
+
+                <input type="date" className="home2-input" />
+              </div>
+            </div>
+
+            {/* TIME */}
+
+            <div className="xl:col-span-2">
+              <FormLabel>Pickup Time</FormLabel>
+
+              <div className="home2-field">
+                <FaClock className="shrink-0 text-[12px] !text-[#ffbd00]" />
+
+                <input type="time" className="home2-input" />
+              </div>
+            </div>
+
+            {/* PASSENGERS */}
+
+            <div
+              className="
+                sm:col-span-2
+                lg:col-span-1
+                xl:col-span-2
+              "
+            >
+              <FormLabel>Passengers</FormLabel>
+
+              <div className="home2-field">
+                <FaUsers className="shrink-0 text-[13px] !text-[#ffbd00]" />
+
+                <select
+                  defaultValue=""
+                  className="home2-input cursor-pointer"
+                >
+                  <option value="" disabled>
+                    Select seats
+                  </option>
+
+                  <option value="1">1 Passenger</option>
+                  <option value="2">2 Passengers</option>
+                  <option value="3">3 Passengers</option>
+                  <option value="4">4 Passengers</option>
+                  <option value="5">5 Passengers</option>
+                  <option value="6">6 Passengers</option>
+                  <option value="7">7 Passengers</option>
+                </select>
+              </div>
             </div>
           </div>
         </div>
 
         {/* =====================================================
-            BOOK YOUR RIDE
+            CHOOSE CAB
         ===================================================== */}
 
-        <div
-          className="
-            mt-5
-            w-full
-            rounded-[12px]
-            bg-[#071016]
-            px-5
-            py-5
+        <div className="mt-3 sm:mt-10 lg:mt-12">
+          {/* CAB HEADING */}
 
-            sm:px-6
-
-            lg:px-7
-          "
-        >
           <div
             className="
-              grid
-              grid-cols-1
-              items-center
-              gap-3
+              flex
+              flex-col
+              gap-2
 
-              sm:grid-cols-2
-
-              lg:grid-cols-[1.3fr_1fr_1fr_1.1fr]
-              lg:gap-5
+              sm:flex-row
+              sm:items-end
+              sm:justify-between
             "
           >
+            <div>
+              <span
+                className="
+                  text-[9px]
+                  font-bold
+                  uppercase
+                  tracking-[1.3px]
+                  !text-[#d99c00]
 
-            {/* CTA TEXT */}
+                  sm:text-[10px]
+                "
+              >
+                Our Fleet
+              </span>
 
-            <div
-              className="
-                pb-1
-                text-center
-
-                sm:col-span-2
-
-                lg:col-span-1
-                lg:pb-0
-                lg:text-left
-              "
-            >
               <h2
                 className="
                   m-0
-                  text-[18px]
+                  mt-1
+                  font-['Poppins']
+                  text-[21px]
                   font-bold
                   leading-[1.3]
-                  !text-white
+                  !text-[#111]
 
-                  sm:text-[19px]
-
-                  lg:text-[20px]
+                  sm:text-[23px]
+                  md:text-[25px]
+                  lg:text-[27px]
                 "
               >
-                Book Your Ride Today!
+                Choose Your Cab
               </h2>
 
               <p
                 className="
-                  mx-auto
-                  mb-0
-                  mt-2
-                  max-w-[270px]
-                  text-[11px]
-                  leading-[17px]
-                  !text-gray-300
+                  m-0
+                  mt-1
+                  text-[9px]
+                  leading-[16px]
+                  !text-gray-500
 
-                  lg:mx-0
+                  sm:text-[10px]
                 "
               >
-                Quick booking, best prices and memorable journeys.
+                Select the vehicle that best suits your journey.
               </p>
             </div>
 
-            {/* BOOK NOW */}
-
-            <a
-              href="#booking"
+            <div
               className="
-                group
-                flex
-                min-h-[70px]
-                w-full
+                hidden
                 items-center
-                justify-center
-                gap-3
-                rounded-[9px]
-                bg-[#ffbd00]
-                px-4
-                no-underline
-                !text-black
-                transition-all
-                duration-300
+                gap-2
+                text-[9px]
+                font-medium
+                !text-gray-500
 
-                hover:-translate-y-[2px]
-                hover:bg-[#ffc928]
-                hover:!text-black
+                sm:flex
+                sm:text-[10px]
               "
             >
-              <FaTaxi
-                className="
-                  shrink-0
-                  text-[21px]
-                  !text-black
-                  transition-transform
-                  duration-300
-                  group-hover:scale-110
-                "
-              />
+              <FaCheckCircle className="!text-[#ffbd00]" />
 
-              <div className="text-left">
-                <h3 className="m-0 text-[13px] font-bold !text-black">
-                  Book Now
-                </h3>
-
-                <p className="m-0 mt-[3px] text-[10px] !text-black/75">
-                  Reserve your cab
-                </p>
-              </div>
-            </a>
-
-            {/* CALL NOW */}
-
-            <a
-              href="tel:+919876543210"
-              className="
-                group
-                flex
-                min-h-[70px]
-                w-full
-                items-center
-                justify-center
-                gap-3
-                rounded-[9px]
-                border
-                border-[#ffbd00]
-                bg-transparent
-                px-4
-                no-underline
-                transition-all
-                duration-300
-
-                hover:-translate-y-[2px]
-                hover:bg-[#ffbd00]/10
-              "
-            >
-              <FaPhoneAlt
-                className="
-                  shrink-0
-                  text-[20px]
-                  !text-[#ffbd00]
-                  transition-transform
-                  duration-300
-                  group-hover:rotate-12
-                "
-              />
-
-              <div className="text-left">
-                <h3 className="m-0 text-[13px] font-bold !text-[#ffbd00]">
-                  Call Now
-                </h3>
-
-                <p
-                  className="
-                    m-0
-                    mt-[3px]
-                    whitespace-nowrap
-                    text-[10px]
-                    !text-white
-                  "
-                >
-                  +91 98765 43210
-                </p>
-              </div>
-            </a>
-
-            {/* WHATSAPP */}
-
-            <a
-              href="https://wa.me/919876543210?text=Hello%20WayTaxi24%2C%20I%20want%20to%20book%20a%20taxi."
-              target="_blank"
-              rel="noopener noreferrer"
-              className="
-                group
-                flex
-                min-h-[70px]
-                w-full
-                items-center
-                justify-center
-                gap-3
-                rounded-[9px]
-                border
-                border-[#ffbd00]
-                bg-transparent
-                px-4
-                no-underline
-                transition-all
-                duration-300
-
-                hover:-translate-y-[2px]
-                hover:bg-[#ffbd00]/10
-              "
-            >
-              <FaWhatsapp
-                className="
-                  shrink-0
-                  text-[24px]
-                  !text-[#ffbd00]
-                  transition-transform
-                  duration-300
-                  group-hover:scale-110
-                "
-              />
-
-              <div className="text-left">
-                <h3
-                  className="
-                    m-0
-                    whitespace-nowrap
-                    text-[12px]
-                    font-bold
-                    !text-[#ffbd00]
-
-                    sm:text-[13px]
-                  "
-                >
-                  WhatsApp Booking
-                </h3>
-
-                <p className="m-0 mt-[3px] text-[10px] !text-gray-300">
-                  Chat with us
-                </p>
-              </div>
-            </a>
+              Clean & verified vehicles
+            </div>
           </div>
+
+          {/* =====================================================
+              CAB CARDS
+          ===================================================== */}
+
+          <div
+            className="
+              mt-5
+              grid
+              grid-cols-1
+              items-stretch
+              gap-5
+
+              sm:grid-cols-2
+
+              lg:grid-cols-3
+              lg:gap-5
+
+              xl:gap-6
+            "
+          >
+            {cars.map((car) => (
+              <CabCard
+                key={car.name}
+                car={car}
+                selected={selectedCab === car.name}
+                onSelect={() => setSelectedCab(car.name)}
+              />
+            ))}
+          </div>
+        </div>
+
+        {/* =====================================================
+            SELECTED CAB BAR
+        ===================================================== */}
+
+        <div
+          className="
+            mt-6
+            flex
+            flex-col
+            items-center
+            gap-4
+            rounded-xl
+            bg-[#071016]
+            px-4
+            py-5
+            text-center
+            shadow-[0_8px_25px_rgba(0,0,0,.10)]
+
+            sm:mt-7
+            sm:rounded-2xl
+            sm:px-6
+
+            md:flex-row
+            md:justify-between
+            md:text-left
+
+            lg:px-8
+            lg:py-6
+          "
+        >
+          <div>
+            <p
+              className="
+                m-0
+                text-[8px]
+                font-bold
+                uppercase
+                tracking-[1.4px]
+                !text-[#ffbd00]
+
+                sm:text-[9px]
+              "
+            >
+              Your Selected Cab
+            </p>
+
+            <h3
+              className="
+                m-0
+                mt-1
+                font-['Poppins']
+                text-[17px]
+                font-bold
+                !text-white
+
+                sm:text-[19px]
+                lg:text-[20px]
+              "
+            >
+              {selectedCab}
+            </h3>
+
+            <p
+              className="
+                m-0
+                mt-1
+                text-[9px]
+                leading-[16px]
+                !text-gray-400
+
+                sm:text-[10px]
+              "
+            >
+              Complete your booking and we'll confirm your ride.
+            </p>
+          </div>
+
+          <a
+            href="#booking"
+            className="
+              group
+              flex
+              h-[44px]
+              w-full
+              items-center
+              justify-center
+              gap-2
+              rounded-lg
+              bg-[#ffbd00]
+              px-5
+              no-underline
+              text-[10px]
+              font-bold
+              !text-black
+              transition-all
+              duration-300
+
+              sm:w-auto
+              sm:min-w-[190px]
+              sm:text-[11px]
+
+              hover:-translate-y-[2px]
+              hover:bg-[#ffc928]
+              hover:!text-black
+            "
+          >
+            Continue Booking
+
+            <FaArrowRight
+              className="
+                text-[9px]
+                transition-transform
+                duration-300
+                group-hover:translate-x-1
+              "
+            />
+          </a>
         </div>
       </div>
     </section>
@@ -487,191 +582,154 @@ export default function Home2() {
 }
 
 /* =========================================================
-   SECTION TITLE
+   FORM LABEL
 ========================================================= */
 
-function SectionTitle({ children }) {
+function FormLabel({ children }) {
   return (
-    <h2
+    <label
       className="
-        m-0
-        text-[18px]
-        font-bold
-        leading-[1.25]
-        !text-[#111]
+        mb-1.5
+        block
+        font-['Poppins']
+        text-[9px]
+        font-semibold
+        !text-[#444]
 
-        sm:text-[19px]
-
-        lg:text-[20px]
+        sm:text-[10px]
+        lg:text-[11px]
       "
     >
       {children}
-    </h2>
+    </label>
   );
 }
 
 /* =========================================================
-   SERVICE CARD
+   CAB CARD
 ========================================================= */
 
-function ServiceCard({ icon, title, text }) {
+function CabCard({ car, selected, onSelect }) {
   return (
     <div
-      className="
-        group
-        flex
-        min-h-[170px]
-        flex-col
-        items-center
-        justify-center
-        rounded-[9px]
-        border
-        border-gray-200
-        bg-white
-        px-2
-        py-4
-        text-center
-        shadow-[0_2px_8px_rgba(0,0,0,.04)]
-        transition-all
-        duration-300
-
-        sm:min-h-[190px]
-
-        hover:-translate-y-[3px]
-        hover:border-[#ffbd00]
-        hover:shadow-md
-      "
-    >
-      {/* ICON */}
-
-      <div
-        className="
-          flex
-          h-[45px]
-          items-center
-          justify-center
-          text-[27px]
-          !text-[#111]
-          transition-all
-          duration-300
-
-          sm:h-[50px]
-          sm:text-[30px]
-
-          group-hover:scale-110
-          group-hover:!text-[#ffbd00]
-        "
-      >
-        {icon}
-      </div>
-
-      {/* TITLE */}
-
-      <h3
-        className="
-          m-0
-          mt-3
-          text-[10px]
-          font-semibold
-          leading-[15px]
-          !text-[#111]
-
-          sm:text-[11px]
-        "
-      >
-        {title}
-      </h3>
-
-      {/* DESCRIPTION */}
-
-      <p
-        className="
-          m-0
-          mt-2
-          max-w-[110px]
-          text-[9px]
-          leading-[15px]
-          !text-[#555]
-
-          sm:text-[10px]
-          sm:leading-[16px]
-        "
-      >
-        {text}
-      </p>
-    </div>
-  );
-}
-
-/* =========================================================
-   CAR CARD
-========================================================= */
-
-function CarCard({ car }) {
-  return (
-    <div
-      className="
+      onClick={onSelect}
+      className={`
         group
         relative
         flex
-        min-h-[190px]
-        min-w-0
+        h-full
+        min-h-[325px]
+        w-full
+        cursor-pointer
         flex-col
-        items-center
         overflow-hidden
-        rounded-[9px]
+        rounded-xl
         border
-        border-gray-200
         bg-white
-        px-2
-        pb-4
-        pt-3
-        text-center
-        shadow-[0_2px_8px_rgba(0,0,0,.04)]
         transition-all
         duration-300
 
-        hover:-translate-y-[3px]
-        hover:border-[#ffbd00]
-        hover:shadow-md
-      "
-    >
+        sm:min-h-[345px]
+        sm:rounded-2xl
 
-      {/* POPULAR */}
+        lg:min-h-[355px]
+
+        ${
+          selected
+            ? "border-[#ffbd00] shadow-[0_10px_35px_rgba(255,189,0,.16)]"
+            : "border-gray-200 shadow-[0_5px_20px_rgba(0,0,0,.05)] hover:border-[#ffbd00]"
+        }
+
+        hover:-translate-y-[4px]
+      `}
+    >
+      {/* MOST POPULAR */}
 
       {car.popular && (
-        <span
+        <div
           className="
             absolute
-            left-1/2
-            top-0
+            right-3
+            top-3
             z-20
-            -translate-x-1/2
-            rounded-b-md
+            rounded-full
             bg-[#ffbd00]
-            px-3
-            py-[3px]
-            text-[8px]
+            px-2.5
+            py-1
+            text-[7px]
             font-bold
+            uppercase
+            tracking-[.4px]
             !text-black
+
+            sm:right-4
+            sm:top-4
+            sm:px-3
+            sm:text-[8px]
           "
         >
-          Popular
-        </span>
+          Most Popular
+        </div>
       )}
 
-      {/* IMAGE */}
+      {/* SELECTED CHECK */}
+
+      <div
+        className={`
+          absolute
+          left-3
+          top-3
+          z-20
+          flex
+          h-[22px]
+          w-[22px]
+          items-center
+          justify-center
+          rounded-full
+          border-2
+          transition-all
+          duration-300
+
+          sm:left-4
+          sm:top-4
+          sm:h-[24px]
+          sm:w-[24px]
+
+          ${
+            selected
+              ? "border-[#ffbd00] bg-[#ffbd00] !text-black"
+              : "border-gray-300 bg-white !text-transparent"
+          }
+        `}
+      >
+        <FaCheckCircle className="text-[10px] sm:text-[11px]" />
+      </div>
+
+      {/* =====================================================
+          CAR IMAGE
+      ===================================================== */}
 
       <div
         className="
           flex
-          h-[90px]
+          h-[165px]
           w-full
-          items-end
+          shrink-0
+          items-center
           justify-center
-          pt-3
+          bg-gradient-to-b
+          from-[#fafafa]
+          to-white
+          px-5
+          pb-2
+          pt-7
 
-          sm:h-[100px]
+          sm:h-[180px]
+          sm:px-6
+
+          lg:h-[190px]
+
+          xl:h-[195px]
         "
       >
         <img
@@ -683,166 +741,203 @@ function CarCard({ car }) {
             object-contain
             transition-transform
             duration-500
-            group-hover:scale-105
+
+            group-hover:scale-[1.04]
           "
         />
       </div>
 
-      {/* NAME */}
-
-      <h3
-        className="
-          m-0
-          mt-2
-          text-[13px]
-          font-bold
-          !text-[#111]
-
-          sm:text-[14px]
-        "
-      >
-        {car.name}
-      </h3>
-
-      {/* SEATS */}
+      {/* =====================================================
+          CAB INFORMATION
+      ===================================================== */}
 
       <div
         className="
-          mt-[5px]
           flex
-          items-center
-          justify-center
-          gap-1
-          text-[9px]
-          !text-[#555]
+          flex-1
+          flex-col
+          border-t
+          border-gray-100
+          p-4
 
-          sm:text-[10px]
+          sm:p-5
         "
       >
-        <FaUsers className="text-[9px] !text-[#555]" />
+        {/* CAB NAME + PRICE */}
 
-        <span>{car.seats}</span>
-      </div>
+        <div className="flex items-start justify-between gap-3 sm:gap-4">
+          <div className="min-w-0 flex-1">
+            <h3
+              className="
+                m-0
+                font-['Poppins']
+                text-[15px]
+                font-bold
+                !text-[#111]
 
-      {/* PRICE */}
+                sm:text-[16px]
+                lg:text-[17px]
+              "
+            >
+              {car.name}
+            </h3>
 
-      <p
-        className="
-          m-0
-          mt-[5px]
-          text-[11px]
-          font-bold
-          !text-[#111]
+            <p
+              className="
+                m-0
+                mt-1
+                max-w-[230px]
+                text-[9px]
+                leading-[15px]
+                !text-gray-500
 
-          sm:text-[12px]
-        "
-      >
-        {car.price}
-      </p>
-    </div>
-  );
-}
+                sm:text-[10px]
+                sm:leading-[16px]
+              "
+            >
+              {car.description}
+            </p>
+          </div>
 
-/* =========================================================
-   ROUTE CARD
-========================================================= */
+          {/* PRICE */}
 
-function RouteCard({ route }) {
-  return (
-    <div
-      className="
-        group
-        flex
-        min-h-[40px]
-        w-full
-        cursor-pointer
-        items-center
-        justify-between
-        gap-2
-        rounded-[7px]
-        border
-        border-gray-200
-        bg-white
-        px-3
-        py-2
-        shadow-[0_2px_7px_rgba(0,0,0,.04)]
-        transition-all
-        duration-300
+          <div className="shrink-0 text-right">
+            <p
+              className="
+                m-0
+                text-[7px]
+                font-medium
+                uppercase
+                tracking-[.3px]
+                !text-gray-400
 
-        hover:border-[#ffbd00]
-        hover:shadow-md
-      "
-    >
+                sm:text-[8px]
+              "
+            >
+              Starts at
+            </p>
 
-      {/* LOCATION */}
+            <p
+              className="
+                m-0
+                mt-1
+                whitespace-nowrap
+                text-[13px]
+                font-bold
+                !text-[#111]
 
-      <div className="flex min-w-0 items-center gap-1.5">
-        <span
+                sm:text-[14px]
+                lg:text-[15px]
+              "
+            >
+              {car.price}
+            </p>
+          </div>
+        </div>
+
+        {/* =====================================================
+            BOTTOM DETAILS
+        ===================================================== */}
+
+        <div
           className="
-            truncate
-            text-[9px]
-            font-medium
-            !text-[#222]
-
-            sm:text-[10px]
+            mt-auto
+            border-t
+            border-gray-100
+            pt-3
           "
         >
-          {route.from}
-        </span>
+          <div
+            className="
+              flex
+              flex-col
+              gap-3
 
-        <FaArrowRight className="shrink-0 text-[7px] !text-[#555]" />
+              min-[380px]:flex-row
+              min-[380px]:items-center
+              min-[380px]:justify-between
+            "
+          >
+            {/* FEATURES */}
 
-        <span
-          className="
-            truncate
-            text-[9px]
-            font-medium
-            !text-[#222]
+            <div className="flex items-center gap-3">
+              <div
+                className="
+                  flex
+                  items-center
+                  gap-1.5
+                  whitespace-nowrap
+                  text-[9px]
+                  font-medium
+                  !text-gray-600
 
-            sm:text-[10px]
-          "
-        >
-          {route.to}
-        </span>
-      </div>
+                  sm:text-[10px]
+                "
+              >
+                <FaUsers className="shrink-0 !text-[#ffbd00]" />
 
-      {/* PRICE */}
+                {car.seats}
+              </div>
 
-      <div className="flex shrink-0 items-center gap-1.5">
-        <span
-          className="
-            hidden
-            text-[8px]
-            !text-gray-400
+              <span className="h-3 w-px shrink-0 bg-gray-200" />
 
-            sm:inline
-          "
-        >
-          From
-        </span>
+              <div
+                className="
+                  flex
+                  items-center
+                  gap-1.5
+                  whitespace-nowrap
+                  text-[9px]
+                  font-medium
+                  !text-gray-600
 
-        <span
-          className="
-            whitespace-nowrap
-            text-[9px]
-            font-bold
-            !text-[#111]
+                  sm:text-[10px]
+                "
+              >
+                <FaCar className="shrink-0 !text-[#ffbd00]" />
 
-            sm:text-[10px]
-          "
-        >
-          {route.price}
-        </span>
+                {car.luggage}
+              </div>
+            </div>
 
-        <FaChevronRight
-          className="
-            text-[7px]
-            !text-gray-400
-            transition-transform
-            duration-300
-            group-hover:translate-x-[2px]
-          "
-        />
+            {/* SELECT BUTTON */}
+
+            <button
+              type="button"
+              onClick={(event) => {
+                event.stopPropagation();
+                onSelect();
+              }}
+              className={`
+                flex
+                h-[36px]
+                w-full
+                items-center
+                justify-center
+                rounded-lg
+                border
+                px-4
+                text-[9px]
+                font-bold
+                transition-all
+                duration-300
+
+                min-[380px]:w-auto
+                min-[380px]:min-w-[92px]
+
+                sm:text-[10px]
+
+                ${
+                  selected
+                    ? "border-[#ffbd00] bg-[#ffbd00] !text-black"
+                    : "border-gray-200 bg-white !text-[#333] hover:border-[#ffbd00] hover:!text-[#d99c00]"
+                }
+              `}
+            >
+              {selected ? "Selected" : "Select Cab"}
+            </button>
+          </div>
+        </div>
       </div>
     </div>
   );

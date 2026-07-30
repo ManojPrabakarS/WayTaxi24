@@ -21,6 +21,7 @@ export default function Home1() {
     <section
       className="
         relative
+        w-full
         overflow-hidden
         bg-cover
         bg-center
@@ -31,20 +32,23 @@ export default function Home1() {
         backgroundImage: `url(${heroBg})`,
       }}
     >
-      {/* OVERLAY */}
+      {/* ================= OVERLAY ================= */}
+
       <div
         className="
           absolute
           inset-0
-          bg-black/35
+          bg-black/50
+
           lg:bg-gradient-to-r
           lg:from-black/95
-          lg:via-black/75
-          lg:to-black/30
+          lg:via-black/70
+          lg:to-black/25
         "
       />
 
-      {/* MAIN CONTAINER */}
+      {/* ================= MAIN CONTAINER ================= */}
+
       <div
         className="
           relative
@@ -52,170 +56,210 @@ export default function Home1() {
           mx-auto
           w-full
           max-w-[1440px]
+
           px-4
           pb-6
-          pt-8
-          sm:px-6
-          sm:pt-10
+          pt-7
+
+          sm:px-5
+          sm:pt-8
+
+          md:px-6
+
           lg:px-8
-          lg:pb-8
-          lg:pt-12
-          xl:px-10
+          lg:pb-7
+          lg:pt-9
         "
       >
-        {/* =====================================================
+        {/* =================================================
             HERO CONTENT
-        ===================================================== */}
+        ================================================= */}
 
-        <div className="w-full max-w-[650px]">
-          {/* BADGE */}
-          <div
-            className="
-              inline-flex
-              items-center
-              gap-2
-              rounded-full
-              border
-              border-yellow-400/60
-              bg-black/20
-              px-3
-              py-1.5
-              backdrop-blur-sm
-              sm:px-4
-              sm:py-2
-            "
-          >
-            <FaCar className="text-[12px] text-yellow-400" />
+        {/* ================= HERO CONTENT ================= */}
 
-            <span
-              className="
-                text-[10px]
-                font-bold
-                uppercase
-                tracking-[1px]
-                text-yellow-400
-                sm:text-[11px]
-                sm:tracking-[1.5px]
-              "
-            >
-              All India Taxi Service
-            </span>
-          </div>
+<div
+  className="
+    w-full
+    max-w-[650px]
+    pt-2
 
-          {/* TITLE */}
-          <h1
-            className="
-              mt-4
-              text-[36px]
-              font-extrabold
-              leading-[1.08]
-              tracking-[-1px]
-              text-white
-              sm:text-[46px]
-              md:text-[54px]
-              lg:text-[60px]
-              xl:text-[64px]
-            "
-          >
-            Comfortable Rides,
-            <br />
+    sm:pt-3
+    md:pt-4
+    lg:pt-5
+  "
+>
+  {/* BADGE */}
 
-            Every Time,
-            <br />
+  <div
+    className="
+      inline-flex
+      items-center
+      gap-2
+      rounded-full
+      border
+      border-yellow-400
+      bg-black/30
+      px-3
+      py-1.5
+    "
+  >
+    <FaCar className="text-[10px] text-yellow-400" />
 
-            <span className="text-yellow-400">
-              Every Mile.
-            </span>
-          </h1>
+    <span
+      className="
+        text-[9px]
+        font-bold
+        uppercase
+        tracking-[0.7px]
+        text-yellow-400
 
-          {/* DESCRIPTION */}
-          <p
-            className="
-              mt-4
-              max-w-[520px]
-              text-[13px]
-              leading-6
-              text-gray-200
-              sm:text-[14px]
-              sm:leading-7
-              lg:text-[15px]
-            "
-          >
-            Safe, reliable and affordable taxi service across India.
-            Travel comfortably with professional drivers and
-            well-maintained vehicles.
-          </p>
+        sm:text-[10px]
+      "
+    >
+      All India Taxi Service
+    </span>
+  </div>
 
-          {/* =================================================
-              HERO FEATURES
-          ================================================= */}
+  {/* HEADING */}
 
-          <div
-            className="
-              mt-6
-              grid
-              max-w-[620px]
-              grid-cols-2
-              gap-x-4
-              gap-y-4
-              sm:mt-7
-              sm:grid-cols-4
-              sm:gap-x-5
-            "
-          >
-            <HeroFeature
-              icon={<FaShieldAlt />}
-              title="Best Price"
-              text="Guaranteed"
-            />
+  <h1
+    className="
+      m-0
+      mt-4
+      font-['Poppins']
+      text-[35px]
+      font-extrabold
+      leading-[1.08]
+      tracking-[-1.3px]
+      !text-white
 
-            <HeroFeature
-              icon={<FaUserCheck />}
-              title="Verified"
-              text="Drivers"
-            />
+      sm:text-[42px]
+      sm:tracking-[-1.5px]
 
-            <HeroFeature
-              icon={<FaCar />}
-              title="Clean & Safe"
-              text="Vehicles"
-            />
+      md:text-[48px]
 
-            <HeroFeature
-              icon={<FaHeadset />}
-              title="24/7"
-              text="Support"
-            />
-          </div>
-        </div>
+      lg:text-[52px]
+      lg:leading-[1.05]
 
-        {/* =====================================================
+      xl:text-[56px]
+    "
+  >
+    Comfortable Rides,
+    <br />
+
+    Every Time,
+    <br />
+
+    <span className="!text-[#FBBF24]">
+      Every Mile.
+    </span>
+  </h1>
+
+  {/* DESCRIPTION */}
+
+  <p
+    className="
+      m-0
+      mt-4
+      max-w-[570px]
+      font-['Poppins']
+      text-[11px]
+      font-normal
+      leading-[18px]
+      !text-gray-200
+
+      sm:text-[12px]
+      sm:leading-[20px]
+
+      md:text-[13px]
+      md:leading-[21px]
+
+      lg:text-[14px]
+      lg:leading-[22px]
+    "
+  >
+    Safe, reliable and affordable taxi service across India.
+    Travel
+    <br className="hidden sm:block" />
+    comfortably with professional drivers and well-maintained vehicles.
+  </p>
+
+  {/* ================= HERO FEATURES ================= */}
+
+  <div
+    className="
+      mt-4
+      grid
+      w-full
+      max-w-[650px]
+      grid-cols-2
+      gap-x-4
+      gap-y-4
+
+      sm:grid-cols-4
+      sm:gap-x-5
+
+      md:gap-x-6
+
+      lg:mt-6
+    "
+  >
+    <HeroFeature
+      icon={<FaShieldAlt />}
+      title="Best Price"
+      text="Guaranteed"
+    />
+
+    <HeroFeature
+      icon={<FaUserCheck />}
+      title="Verified"
+      text="Drivers"
+    />
+
+    <HeroFeature
+      icon={<FaCar />}
+      title="Clean & Safe"
+      text="Vehicles"
+    />
+
+    <HeroFeature
+      icon={<FaHeadset />}
+      title="24/7"
+      text="Support"
+    />
+  </div>
+</div>
+
+        {/* =================================================
             BOOKING BOX
-        ===================================================== */}
+        ================================================= */}
 
         <div
+          id="booking"
           className="
-            mt-8
+            mt-6
             w-full
             overflow-hidden
             rounded-xl
             bg-white
-            shadow-[0_20px_60px_rgba(0,0,0,0.35)]
-            sm:mt-10
-            sm:rounded-2xl
-            lg:mt-10
+            shadow-[0_15px_45px_rgba(0,0,0,0.30)]
+
+            sm:mt-7
+
+            lg:mt-8
           "
         >
-          {/* TRIP TYPES */}
+          {/* ================= TRIP TYPES ================= */}
 
           <div
             className="
               border-b
               border-gray-100
-              p-3
-              sm:px-5
-              sm:pb-0
-              sm:pt-4
+              px-3
+              pt-3
+
+              sm:px-4
+              sm:pt-3
             "
           >
             <div
@@ -223,7 +267,9 @@ export default function Home1() {
                 grid
                 grid-cols-1
                 gap-2
-                min-[420px]:grid-cols-3
+
+                min-[430px]:grid-cols-3
+
                 sm:flex
               "
             >
@@ -253,21 +299,21 @@ export default function Home1() {
             </div>
           </div>
 
-          {/* =================================================
-              BOOKING FIELDS
-          ================================================= */}
+          {/* ================= BOOKING FORM ================= */}
 
           <div
             className="
               grid
               grid-cols-1
-              gap-4
-              p-4
-              sm:p-5
+              gap-3
+              p-3
+
+              sm:p-4
+
               md:grid-cols-2
+
               lg:grid-cols-12
               lg:gap-3
-              xl:gap-4
             "
           >
             {/* FROM */}
@@ -276,7 +322,7 @@ export default function Home1() {
               <FieldLabel>From</FieldLabel>
 
               <div className="booking-field">
-                <FaMapMarkerAlt className="mr-3 shrink-0 text-[14px] text-yellow-500" />
+                <FaMapMarkerAlt className="mr-2 shrink-0 text-[13px] text-yellow-500" />
 
                 <input
                   type="text"
@@ -284,9 +330,9 @@ export default function Home1() {
                   className="
                     min-w-0
                     flex-1
-                    border-none
+                    border-0
                     bg-transparent
-                    text-[12px]
+                    text-[10px]
                     text-gray-800
                     outline-none
                     placeholder:text-gray-400
@@ -301,7 +347,7 @@ export default function Home1() {
               <FieldLabel>To</FieldLabel>
 
               <div className="booking-field">
-                <FaMapMarkerAlt className="mr-3 shrink-0 text-[14px] text-yellow-500" />
+                <FaMapMarkerAlt className="mr-2 shrink-0 text-[13px] text-yellow-500" />
 
                 <input
                   type="text"
@@ -309,16 +355,16 @@ export default function Home1() {
                   className="
                     min-w-0
                     flex-1
-                    border-none
+                    border-0
                     bg-transparent
-                    text-[12px]
+                    text-[11px]
                     text-gray-800
                     outline-none
                     placeholder:text-gray-400
                   "
                 />
 
-                <FaExchangeAlt className="ml-2 shrink-0 text-[12px] text-gray-400" />
+                <FaExchangeAlt className="ml-2 shrink-0 text-[11px] text-gray-400" />
               </div>
             </div>
 
@@ -328,16 +374,16 @@ export default function Home1() {
               <FieldLabel>Pickup Date</FieldLabel>
 
               <div className="booking-field">
-                <FaCalendarAlt className="mr-2 shrink-0 text-[13px] text-yellow-500" />
+                <FaCalendarAlt className="mr-2 shrink-0 text-[12px] text-yellow-500" />
 
                 <input
                   type="date"
                   className="
                     min-w-0
                     flex-1
-                    border-none
+                    border-0
                     bg-transparent
-                    text-[11px]
+                    text-[10px]
                     text-gray-700
                     outline-none
                   "
@@ -351,16 +397,16 @@ export default function Home1() {
               <FieldLabel>Pickup Time</FieldLabel>
 
               <div className="booking-field">
-                <FaClock className="mr-2 shrink-0 text-[13px] text-yellow-500" />
+                <FaClock className="mr-2 shrink-0 text-[12px] text-yellow-500" />
 
                 <input
                   type="time"
                   className="
                     min-w-0
                     flex-1
-                    border-none
+                    border-0
                     bg-transparent
-                    text-[11px]
+                    text-[10px]
                     text-gray-700
                     outline-none
                   "
@@ -375,7 +421,9 @@ export default function Home1() {
                 flex
                 w-full
                 items-end
+
                 md:col-span-2
+
                 lg:col-span-2
               "
             >
@@ -383,7 +431,7 @@ export default function Home1() {
                 type="button"
                 className="
                   flex
-                  h-[50px]
+                  h-[46px]
                   w-full
                   items-center
                   justify-center
@@ -391,24 +439,25 @@ export default function Home1() {
                   rounded-lg
                   border-0
                   bg-yellow-400
-                  text-[13px]
-                  font-extrabold
-                  text-black
-                  shadow-[0_8px_20px_rgba(250,204,21,0.25)]
+                  text-[12px]
+                  font-bold
+                  !text-black
+                  shadow-[0_6px_18px_rgba(250,204,21,.25)]
                   transition-all
                   duration-300
+
                   hover:-translate-y-[2px]
                   hover:bg-yellow-500
-                  hover:shadow-[0_10px_25px_rgba(250,204,21,0.35)]
                 "
               >
                 Check Fare
-                <FaCar />
+
+                <FaCar className="text-[12px]" />
               </button>
             </div>
           </div>
 
-          {/* SMALL INFORMATION */}
+          {/* ================= BOTTOM INFO ================= */}
 
           <div
             className="
@@ -418,66 +467,72 @@ export default function Home1() {
               border-t
               border-gray-100
               bg-gray-50
-              px-4
-              py-3
+              px-3
+              py-2
+
               sm:flex-row
               sm:flex-wrap
               sm:items-center
-              sm:gap-x-7
-              sm:px-5
+              sm:gap-x-6
+              sm:px-4
             "
           >
             <SmallCheck text="No hidden charges" />
+
             <SmallCheck text="Verified drivers" />
+
             <SmallCheck text="24/7 booking support" />
           </div>
         </div>
 
-        {/* =====================================================
+        {/* =================================================
             TRUST CARDS
-        ===================================================== */}
+        ================================================= */}
 
-        <div
-          className="
-            mt-4
-            grid
-            grid-cols-1
-            overflow-hidden
-            rounded-xl
-            border
-            border-white/15
-            bg-black/65
-            shadow-xl
-            backdrop-blur-md
-            sm:grid-cols-2
-            sm:rounded-2xl
-            lg:grid-cols-4
-          "
-        >
-          <TrustCard
-            icon={<FaCar />}
-            title="Well Maintained Cabs"
-            text="Clean and comfortable vehicles for a smooth journey."
-          />
+        {/* ================= TRUST CARDS ================= */}
 
-          <TrustCard
-            icon={<FaUserCheck />}
-            title="Verified Drivers"
-            text="Professional and experienced drivers for your safety."
-          />
+<div
+  className="
+    mt-4
+    grid
+    w-full
+    grid-cols-1
+    overflow-hidden
+    rounded-xl
+    border
+    border-white/20
+    bg-[#071016]/95
+    shadow-lg
+    backdrop-blur-md
 
-          <TrustCard
-            icon={<FaMapMarkerAlt />}
-            title="On Time Pickup"
-            text="Punctual pickup and timely drop for every booking."
-          />
+    sm:grid-cols-2
+    lg:grid-cols-4
+  "
+>
+  <TrustCard
+    icon={<FaCar />}
+    title="Well Maintained Cabs"
+    text="Clean and comfortable vehicles for a smooth journey."
+  />
 
-          <TrustCard
-            icon={<FaHeadset />}
-            title="24/7 Customer Support"
-            text="Our support team is available whenever you need us."
-          />
-        </div>
+  <TrustCard
+    icon={<FaUserCheck />}
+    title="Verified Drivers"
+    text="Professional and experienced drivers for your safety."
+  />
+
+  <TrustCard
+    icon={<FaMapMarkerAlt />}
+    title="On Time Pickup"
+    text="Punctual pickup and timely drop for every booking."
+  />
+
+  <TrustCard
+    icon={<FaHeadset />}
+    title="24/7 Customer Support"
+    text="Our support team is available whenever you need us."
+  />
+</div>
       </div>
     </section>
   );
@@ -494,49 +549,51 @@ function TripButton({ active, onClick, icon, children }) {
       onClick={onClick}
       className={`
         flex
-        h-[44px]
+        h-[40px]
         w-full
         items-center
         justify-center
         gap-2
-        rounded-lg
+        rounded-t-lg
         border-0
         px-4
         text-[11px]
         font-bold
         transition-all
         duration-300
+
         sm:w-auto
-        sm:min-w-[145px]
-        sm:rounded-b-none
-        sm:text-[12px]
+        sm:min-w-[140px]
 
         ${
           active
-            ? "bg-yellow-400 text-black shadow-sm"
-            : "bg-gray-100 text-gray-700 hover:bg-yellow-50 hover:text-yellow-600"
+            ? "bg-yellow-400 !text-black"
+            : "bg-gray-100 !text-gray-700 hover:bg-yellow-50 hover:!text-yellow-600"
         }
       `}
     >
       {icon}
-      <span className="whitespace-nowrap">{children}</span>
+
+      <span className="whitespace-nowrap">
+        {children}
+      </span>
     </button>
   );
 }
 
 /* =========================================================
-   LABEL
+   FIELD LABEL
 ========================================================= */
 
 function FieldLabel({ children }) {
   return (
     <label
       className="
-        mb-2
+        mb-1.5
         block
-        text-[11px]
-        font-bold
-        text-gray-700
+        text-[10px]
+        font-semibold
+        !text-gray-600
       "
     >
       {children}
@@ -550,12 +607,12 @@ function FieldLabel({ children }) {
 
 function HeroFeature({ icon, title, text }) {
   return (
-    <div className="group flex min-w-0 items-center gap-2.5">
+    <div className="group flex min-w-0 items-center gap-2">
       <div
         className="
           flex
-          h-[40px]
-          w-[40px]
+          h-[36px]
+          w-[36px]
           shrink-0
           items-center
           justify-center
@@ -563,26 +620,37 @@ function HeroFeature({ icon, title, text }) {
           border
           border-yellow-400
           bg-yellow-400/10
-          text-[14px]
-          text-yellow-400
+          text-[12px]
+          !text-yellow-400
           transition-all
           duration-300
+
+          sm:h-[38px]
+          sm:w-[38px]
+
           group-hover:bg-yellow-400
-          group-hover:text-black
-          sm:h-[42px]
-          sm:w-[42px]
-          sm:text-[15px]
+          group-hover:!text-black
         "
       >
         {icon}
       </div>
 
       <div className="min-w-0">
-        <p className="m-0 whitespace-nowrap text-[10px] font-bold text-white sm:text-[11px]">
+        <p
+          className="
+            m-0
+            whitespace-nowrap
+            text-[9px]
+            font-bold
+            !text-white
+
+            sm:text-[10px]
+          "
+        >
           {title}
         </p>
 
-        <p className="m-0 mt-[2px] text-[9px] text-gray-300">
+        <p className="m-0 mt-[1px] text-[8px] !text-gray-300 sm:text-[9px]">
           {text}
         </p>
       </div>
@@ -600,29 +668,32 @@ function TrustCard({ icon, title, text }) {
       className="
         group
         flex
-        items-start
+        items-center
         gap-3
         border-b
         border-white/10
-        p-4
+        p-3
         transition-all
         duration-300
-        hover:bg-white/[0.05]
-        sm:min-h-[120px]
-        sm:gap-4
-        sm:p-5
+
+        sm:min-h-[95px]
+        sm:p-4
         sm:odd:border-r
+
+        lg:min-h-[100px]
         lg:border-b-0
         lg:border-r
         lg:odd:border-r
         lg:last:border-r-0
+
+        hover:bg-white/[0.05]
       "
     >
       <div
         className="
           flex
-          h-[44px]
-          w-[44px]
+          h-[40px]
+          w-[40px]
           shrink-0
           items-center
           justify-center
@@ -630,27 +701,39 @@ function TrustCard({ icon, title, text }) {
           border
           border-yellow-400
           bg-yellow-400/10
-          text-[16px]
-          text-yellow-400
+          text-[14px]
+          !text-yellow-400
           transition-all
           duration-300
-          group-hover:scale-105
+
           group-hover:bg-yellow-400
-          group-hover:text-black
-          sm:h-[46px]
-          sm:w-[46px]
-          sm:text-[17px]
+          group-hover:!text-black
         "
       >
         {icon}
       </div>
 
       <div className="min-w-0">
-        <h3 className="m-0 text-[12px] font-bold text-white">
+        <h3
+          className="
+            m-0
+            text-[11px]
+            font-bold
+            !text-white
+          "
+        >
           {title}
         </h3>
 
-        <p className="m-0 mt-1.5 text-[10px] leading-[17px] text-gray-300">
+        <p
+          className="
+            m-0
+            mt-1
+            text-[9px]
+            leading-[15px]
+            !text-gray-300
+          "
+        >
           {text}
         </p>
       </div>
@@ -664,8 +747,18 @@ function TrustCard({ icon, title, text }) {
 
 function SmallCheck({ text }) {
   return (
-    <div className="flex items-center gap-1.5 text-[10px] font-medium text-gray-500">
-      <FaCheckCircle className="shrink-0 text-[11px] text-yellow-500" />
+    <div
+      className="
+        flex
+        items-center
+        gap-1.5
+        text-[9px]
+        font-medium
+        !text-gray-500
+      "
+    >
+      <FaCheckCircle className="shrink-0 text-[10px] !text-yellow-500" />
+
       <span>{text}</span>
     </div>
   );

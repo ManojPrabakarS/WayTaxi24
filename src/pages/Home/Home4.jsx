@@ -1,493 +1,243 @@
-import { useEffect, useState } from "react";
 import {
+  FaTaxi,
+  FaShieldAlt,
+  FaClock,
+  FaRupeeSign,
   FaStar,
-  FaQuoteRight,
-  FaChevronLeft,
-  FaChevronRight,
   FaPhoneAlt,
-  FaUserCircle,
 } from "react-icons/fa";
 
 export default function Home4() {
-  const testimonials = [
+  const features = [
     {
-      name: "Rohit Kumar",
-      location: "Chennai",
-      review:
-        "Excellent service! Driver was on time, very polite and the ride was extremely comfortable.",
+      icon: <FaTaxi />,
+      title: "24/7 Service",
+      text: "Book your taxi anytime with instant confirmation.",
     },
     {
-      name: "Anitha S",
-      location: "Bangalore",
-      review:
-        "I booked a round trip to Pondicherry. Everything was smooth and hassle free. Highly recommended!",
+      icon: <FaShieldAlt />,
+      title: "Safe Journey",
+      text: "Professional drivers with verified vehicles.",
     },
     {
-      name: "Vijay P",
-      location: "Coimbatore",
-      review:
-        "Very professional and reliable service. The cab was clean and the driver was very courteous.",
+      icon: <FaClock />,
+      title: "Always On Time",
+      text: "We value your time with punctual pickups.",
     },
     {
-      name: "Arun Kumar",
-      location: "Madurai",
-      review:
-        "Booking was quick and simple. The driver arrived on time and our entire family had a comfortable journey.",
-    },
-    {
-      name: "Priya R",
-      location: "Trichy",
-      review:
-        "Great experience with WayTaxi24. Affordable fare, clean vehicle and excellent customer support.",
+      icon: <FaRupeeSign />,
+      title: "Affordable Fare",
+      text: "Transparent pricing without hidden charges.",
     },
   ];
 
-  const [current, setCurrent] = useState(0);
-
-  // Auto carousel
-  useEffect(() => {
-    const timer = setInterval(() => {
-      setCurrent((prev) => (prev + 1) % testimonials.length);
-    }, 4000);
-
-    return () => clearInterval(timer);
-  }, [testimonials.length]);
-
-  const nextSlide = () => {
-    setCurrent((prev) => (prev + 1) % testimonials.length);
-  };
-
-  const previousSlide = () => {
-    setCurrent(
-      (prev) =>
-        (prev - 1 + testimonials.length) % testimonials.length
-    );
-  };
-
-  // Get 3 testimonials starting from current
-  const visibleTestimonials = [0, 1, 2].map(
-    (offset) =>
-      testimonials[(current + offset) % testimonials.length]
-  );
+  const reviews = [
+    {
+      name: "Rahul",
+      city: "Chennai",
+      img: "https://i.pravatar.cc/100?img=10",
+      review:
+        "Excellent taxi service. Driver arrived on time and the ride was very comfortable.",
+    },
+    {
+      name: "Priya",
+      city: "Bangalore",
+      img: "https://i.pravatar.cc/100?img=15",
+      review:
+        "Affordable price and clean cab. Highly recommend WayTaxi24.",
+    },
+    {
+      name: "Arun",
+      city: "Coimbatore",
+      img: "https://i.pravatar.cc/100?img=20",
+      review:
+        "Booking process was very easy. Fantastic customer support.",
+    },
+  ];
 
   return (
-    <section className="bg-[#f8f8f8] py-10 sm:py-12">
+    <section className="bg-[#f8f9fa] py-4 md:py-20 lg:py-24 overflow-hidden">
 
-      <div className="mx-auto max-w-[1400px] px-5 sm:px-6 lg:px-8">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
-        {/* ==========================================
-            TITLE
-        ========================================== */}
+        <p className="text-yellow-500 font-semibold uppercase text-center tracking-widest">
+          Why Choose Us
+        </p>
 
-        <div className="mb-8 text-center">
+        <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-center mt-4 leading-tight text-gray-900">
+          Trusted By Thousands Of Happy Customers
+        </h2>
 
-          <p
-            className="
-              mb-2
-              text-[11px]
-              font-bold
-              uppercase
-              tracking-[2px]
-              text-[#ffbd00]
-            "
-          >
-            Testimonials
-          </p>
+        <p className="text-center text-gray-600 mt-3 max-w-3xl mx-auto text-base md:text-sg leading-8">
+          Premium taxi services with safe rides, affordable pricing and
+          professional drivers.
+        </p>
 
-          <h2
-            className="
-              m-0
-              text-[26px]
-              font-extrabold
-              text-[#111]
-              sm:text-[30px]
-            "
-          >
-            What Our Customers Say
-          </h2>
+        <div className="grid grid-cols-1 sm:grid-cols-2 sm:grid-cols-4 gap-3 mt-14">
 
-          {/* Yellow line */}
+          {features.map((item, index) => (
 
-          <div
-            className="
-              mx-auto
-              mt-3
-              h-[3px]
-              w-[45px]
-              rounded-full
-              bg-[#ffbd00]
-            "
-          ></div>
-        </div>
-
-
-        {/* ==========================================
-            TESTIMONIAL CAROUSEL
-        ========================================== */}
-
-        <div className="relative">
-
-          {/* PREVIOUS BUTTON */}
-
-          <button
-            type="button"
-            onClick={previousSlide}
-            aria-label="Previous testimonial"
-            className="
-              absolute
-              -left-3
-              top-1/2
-              z-20
-              flex
-              h-10
-              w-10
-              -translate-y-1/2
-              items-center
-              justify-center
-              rounded-full
-              border
-              border-gray-200
-              bg-white
-              text-[12px]
-              text-[#111]
-              shadow-md
-              transition-all
-              duration-300
-
-              hover:border-[#ffbd00]
-              hover:bg-[#ffbd00]
-              hover:text-black
-
-              sm:-left-5
-            "
-          >
-            <FaChevronLeft />
-          </button>
-
-
-          {/* CARDS */}
-
-          <div
-            className="
-              grid
-              gap-5
-              md:grid-cols-2
-              lg:grid-cols-3
-            "
-          >
-            {visibleTestimonials.map((testimonial, index) => (
-              <TestimonialCard
-                key={`${testimonial.name}-${current}-${index}`}
-                testimonial={testimonial}
-                index={index}
-              />
-            ))}
-          </div>
-
-
-          {/* NEXT BUTTON */}
-
-          <button
-            type="button"
-            onClick={nextSlide}
-            aria-label="Next testimonial"
-            className="
-              absolute
-              -right-3
-              top-1/2
-              z-20
-              flex
-              h-10
-              w-10
-              -translate-y-1/2
-              items-center
-              justify-center
-              rounded-full
-              border
-              border-gray-200
-              bg-white
-              text-[12px]
-              text-[#111]
-              shadow-md
-              transition-all
-              duration-300
-
-              hover:border-[#ffbd00]
-              hover:bg-[#ffbd00]
-              hover:text-black
-
-              sm:-right-5
-            "
-          >
-            <FaChevronRight />
-          </button>
-        </div>
-
-
-        {/* ==========================================
-            CAROUSEL DOTS
-        ========================================== */}
-
-        <div className="mt-6 flex items-center justify-center gap-2">
-
-          {testimonials.map((_, index) => (
-            <button
+            <div
               key={index}
-              type="button"
-              onClick={() => setCurrent(index)}
-              aria-label={`Go to testimonial ${index + 1}`}
-              className={`
-                h-[7px]
-                rounded-full
-                border-0
-                transition-all
-                duration-300
+              className="
+group
+bg-white
+rounded-[30px]
+border
+border-gray-100
+shadow-lg
+p-4
+text-center
+transition-all
+duration-500
+hover:-translate-y-3
+hover:shadow-2xl
+hover:border-yellow-400
+"
+            >
 
-                ${
-                  current === index
-                    ? "w-[25px] bg-[#ffbd00]"
-                    : "w-[7px] bg-gray-300 hover:bg-gray-400"
-                }
-              `}
-            ></button>
+             <div
+className="
+mx-auto
+w-20
+h-20
+rounded-full
+bg-yellow-400
+text-black
+flex
+items-center
+justify-center
+text-4xl
+mb-6
+transition-transform
+duration-500
+group-hover:rotate-12
+">
+
+                {item.icon}
+
+              </div>
+
+             <h3 className="text-xl lg:text-2xl font-bold mb-4">
+                {item.title}
+              </h3>
+
+              <p className="text-gray-600 leading-7">
+                {item.text}
+              </p>
+
+            </div>
+
           ))}
 
         </div>
 
+        <div className="mt-3">
 
-        {/* ==========================================
-            NEED HELP BOX
-        ========================================== */}
-
-        <div
-          className="
-            mt-9
-            flex
-            flex-col
-            gap-5
-            rounded-xl
-            bg-[#ffbd00]
-            px-6
-            py-5
-            shadow-[0_8px_25px_rgba(255,189,0,0.18)]
-
-            md:flex-row
-            md:items-center
-            md:justify-between
-
-            lg:px-8
-          "
-        >
-
-          {/* LEFT */}
-
-          <div>
-            <p
-              className="
-                m-0
-                text-[14px]
-                font-medium
-                text-black
-              "
-            >
-              <span className="font-extrabold">
-                Need Help?
-              </span>{" "}
-              We are just a call away!
-            </p>
-          </div>
-
-
-          {/* PHONE */}
-
-          <a
-            href="tel:+919876543210"
-            className="
-              group
-              flex
-              items-center
-              gap-3
-              no-underline
-              !text-black
-            "
-          >
-            <FaPhoneAlt
-              className="
-                text-[19px]
-                transition-transform
-                duration-300
-                group-hover:rotate-12
-              "
-            />
-
-            <span
-              className="
-                text-[19px]
-                font-extrabold
-                sm:text-[21px]
-              "
-            >
-              +91 98765 43210
-            </span>
-          </a>
-
-
-          {/* ENQUIRE BUTTON */}
-
-          <a
-            href="/contact"
-            className="
-              flex
-              min-h-[42px]
-              items-center
-              justify-center
-              rounded-lg
-              bg-[#071016]
-              px-8
-              no-underline
-              !text-white
-              text-[12px]
-              font-bold
-              transition-all
-              duration-300
-
-              hover:-translate-y-[2px]
-              hover:bg-black
-              hover:!text-[#ffbd00]
-              hover:shadow-lg
-            "
-          >
-            Enquire Now
-          </a>
-
-        </div>
-
-      </div>
-    </section>
-  );
-}
-
-
-/* ==========================================================
-   TESTIMONIAL CARD
-========================================================== */
-
-function TestimonialCard({ testimonial }) {
-  return (
-    <div
-      className="
-        group
-        relative
-        min-h-[220px]
-        rounded-2xl
-        border
-        border-gray-200
-        bg-white
-        p-6
-        shadow-sm
-        transition-all
-        duration-500
-
-        hover:-translate-y-1
-        hover:border-[#ffbd00]/60
-        hover:shadow-xl
-      "
-    >
-
-      {/* STARS */}
-
-      <div className="flex gap-1 text-[14px] text-[#ffbd00]">
-        {[...Array(5)].map((_, index) => (
-          <FaStar key={index} />
-        ))}
-      </div>
-
-
-      {/* QUOTE */}
-
-      <FaQuoteRight
-        className="
-          absolute
-          right-6
-          top-5
-          text-[32px]
-          text-gray-100
-          transition-colors
-          duration-300
-          group-hover:text-yellow-100
-        "
-      />
-
-
-      {/* REVIEW */}
-
-      <p
-        className="
-          m-0
-          mt-5
-          min-h-[65px]
-          text-[12px]
-          leading-[20px]
-          text-gray-600
-        "
-      >
-        {testimonial.review}
-      </p>
-
-
-      {/* CUSTOMER */}
-
-      <div className="mt-5 flex items-center gap-3">
-
-        {/* Customer placeholder */}
-
-        <div
-          className="
-            flex
-            h-[46px]
-            w-[46px]
-            shrink-0
-            items-center
-            justify-center
-            overflow-hidden
-            rounded-full
-            bg-gray-100
-            text-[34px]
-            text-gray-400
-          "
-        >
-          <FaUserCircle />
-        </div>
-
-
-        <div>
-
-          <h3
-            className="
-              m-0
-              text-[12px]
-              font-extrabold
-              text-[#111]
-            "
-          >
-            {testimonial.name}
-          </h3>
-
-          <p
-            className="
-              m-0
-              mt-[3px]
-              text-[10px]
-              text-gray-500
-            "
-          >
-            {testimonial.location}
+          <p className="text-yellow-500 text-center font-semibold uppercase tracking-widest">
+            Testimonials
           </p>
 
+          <h2 className="text-4xl font-bold text-center mt-3">
+            What Our Customers Say
+          </h2>
+
+          <div className="grid lg:grid-cols-3 gap-8 mt-3">
+
+            {reviews.map((item, index) => (
+
+              <div
+                key={index}
+                className="bg-white rounded-3xl p-2 shadow-lg hover:shadow-2xl transition"
+              >
+
+                <div className="flex text-yellow-400 mb-2">
+
+                  <FaStar />
+                  <FaStar />
+                  <FaStar />
+                  <FaStar />
+                  <FaStar />
+
+                </div>
+
+                <p className="text-gray-600 leading-8">
+                  {item.review}
+                </p>
+
+                <div className="flex items-center mt-8">
+
+                  <img
+                    src={item.img}
+                    alt={item.name}
+                    className="w-16 h-16 rounded-full"
+                  />
+
+                  <div className="ml-4">
+
+                    <h4 className="font-bold text-lg">
+                      {item.name}
+                    </h4>
+
+                    <p className="text-gray-500">
+                      {item.city}
+                    </p>
+
+                  </div>
+
+                </div>
+
+              </div>
+
+            ))}
+
+          </div>
+
         </div>
+
+      <div className="mt-8 bg-[#FBBF24] rounded-xl px-4 py-3 shadow-md">
+
+ <div className="flex flex-col md:flex-row items-center justify-around w-full px-4">
+
+    {/* Left */}
+
+    <div className="text-center md:text-left">
+      <h2 className="text-lg md:text-xl font-bold text-black">
+        Need a Ride Today?
+      </h2>
+
+      <p className="text-xs md:text-sm text-gray-800 mt-1">
+        Call us now and book your taxi instantly.
+      </p>
+    </div>
+
+    {/* Right */}
+
+    <div className="flex items-center gap-3">
+
+      <div className="w-10 h-10 rounded-full bg-white flex items-center justify-center">
+        <FaPhoneAlt className="text-base text-black" />
+      </div>
+
+      <div>
+        <p className="text-[20px] text-gray-700">Call Now</p>
+        <h4 className="text-base md:text-lg font-semibold text-black">
+          +91 98765 43210
+        </h4>
+      </div>
+
+      <button className="bg-black text-white px-5 py-2 rounded-full text-sm font-medium hover:bg-gray-800 transition">
+        Book Now
+      </button>
+
+    </div>
+
+  </div>
+
+</div>
 
       </div>
 
-    </div>
+    </section>
   );
 }
