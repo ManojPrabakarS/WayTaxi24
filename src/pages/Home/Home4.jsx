@@ -6,6 +6,7 @@ import {
   FaStar,
   FaPhoneAlt,
 } from "react-icons/fa";
+import CallToAction from "../../Components/CallToAction";
 
 export default function Home4() {
   const features = [
@@ -73,7 +74,7 @@ export default function Home4() {
           professional drivers.
         </p>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 sm:grid-cols-4 gap-3 mt-14">
+        <div className="grid grid-cols-1 sm:grid-cols-4 gap-3 mt-14">
 
           {features.map((item, index) => (
 
@@ -96,8 +97,8 @@ hover:border-yellow-400
 "
             >
 
-             <div
-className="
+              <div
+                className="
 mx-auto
 w-20
 h-20
@@ -118,7 +119,7 @@ group-hover:rotate-12
 
               </div>
 
-             <h3 className="text-xl lg:text-2xl font-bold mb-4">
+              <h3 className="text-xl lg:text-2xl font-bold mb-4">
                 {item.title}
               </h3>
 
@@ -148,7 +149,7 @@ group-hover:rotate-12
 
               <div
                 key={index}
-                className="bg-white rounded-3xl p-2 shadow-lg hover:shadow-2xl transition"
+                className="bg-white rounded-3xl p-5 shadow-lg hover:shadow-2xl transition"
               >
 
                 <div className="flex text-yellow-400 mb-2">
@@ -195,46 +196,7 @@ group-hover:rotate-12
 
         </div>
 
-      <div className="mt-8 bg-[#FBBF24] rounded-xl px-4 py-3 shadow-md">
-
- <div className="flex flex-col md:flex-row items-center justify-around w-full px-4">
-
-    {/* Left */}
-
-    <div className="text-center md:text-left">
-      <h2 className="text-lg md:text-xl font-bold text-black">
-        Need a Ride Today?
-      </h2>
-
-      <p className="text-xs md:text-sm text-gray-800 mt-1">
-        Call us now and book your taxi instantly.
-      </p>
-    </div>
-
-    {/* Right */}
-
-    <div className="flex items-center gap-3">
-
-      <div className="w-10 h-10 rounded-full bg-white flex items-center justify-center">
-        <FaPhoneAlt className="text-base text-black" />
-      </div>
-
-      <div>
-        <p className="text-[20px] text-gray-700">Call Now</p>
-        <h4 className="text-base md:text-lg font-semibold text-black">
-          +91 98765 43210
-        </h4>
-      </div>
-
-      <button className="bg-black text-white px-5 py-2 rounded-full text-sm font-medium hover:bg-gray-800 transition">
-        Book Now
-      </button>
-
-    </div>
-
-  </div>
-
-</div>
+        <CallToAction />
 
       </div>
 

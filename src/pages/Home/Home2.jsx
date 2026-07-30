@@ -8,41 +8,44 @@ import {
   FaCar,
   FaArrowRight,
   FaCheckCircle,
+  FaLuggageCart,
 } from "react-icons/fa";
 
-import sedan from "../../assets/4seater.png";
-import creta from "../../assets/5seater.png";
+import sedan from "../../assets/Dzire.png";
+// import creta from "../../assets/5seater.png";
 import innova from "../../assets/7seater.png";
-
+import carens from '../../assets/Carens.png'
+import { FaBagShopping } from "react-icons/fa6";
 export default function Home2() {
   const [selectedCab, setSelectedCab] = useState("SUV");
 
   const cars = [
     {
       image: sedan,
-      name: "Sedan",
+      name: "Swift Dzire / Etios",
       seats: "4 Seats",
       luggage: "2 Bags",
-      price: "₹12/km",
+      price: "₹15/km",
       description: "Perfect for city rides & small families",
     },
     {
-      image: creta,
-      name: "SUV",
-      seats: "5 Seats",
+      image: carens,
+      name: "Kia Carens / Ertiga",
+      seats: "6 Seats",
       luggage: "3 Bags",
-      price: "₹16/km",
-      description: "Comfortable choice for family trips",
+      price: "₹20/km",
+      description: "Ideal for groups & long journeys",
       popular: true,
     },
     {
       image: innova,
-      name: "Innova",
+      name: "Innova / Innova Crysta",
       seats: "7 Seats",
       luggage: "4 Bags",
-      price: "₹20/km",
-      description: "Ideal for groups & long journeys",
+      price: "₹22/km",
+      description: "Comfortable choice for family trips",
     },
+  
   ];
 
   return (
@@ -256,7 +259,7 @@ export default function Home2() {
             <div className="xl:col-span-3">
               <FormLabel>Pickup Location</FormLabel>
 
-              <div className="home2-field">
+              <div className="home2-field ">
                 <FaMapMarkerAlt className="shrink-0 text-[13px] !text-[#ffbd00]" />
 
                 <input
@@ -702,7 +705,7 @@ function CabCard({ car, selected, onSelect }) {
           }
         `}
       >
-        <FaCheckCircle className="text-[10px] sm:text-[11px]" />
+        <FaCheckCircle className="text-[10px] sm:text-[15px]" />
       </div>
 
       {/* =====================================================
@@ -874,7 +877,7 @@ function CabCard({ car, selected, onSelect }) {
                   sm:text-[10px]
                 "
               >
-                <FaUsers className="shrink-0 !text-[#ffbd00]" />
+                <FaUsers className="shrink-0 !text-[#ffbd00]" size={18} />
 
                 {car.seats}
               </div>
@@ -894,7 +897,7 @@ function CabCard({ car, selected, onSelect }) {
                   sm:text-[10px]
                 "
               >
-                <FaCar className="shrink-0 !text-[#ffbd00]" />
+                <FaLuggageCart className="shrink-0 !text-[#ffbd00]" size={18} />
 
                 {car.luggage}
               </div>

@@ -12,6 +12,7 @@ import {
   FaPlane,
   FaExchangeAlt,
   FaCheckCircle,
+  FaWhatsapp,
 } from "react-icons/fa";
 
 export default function Home1() {
@@ -431,28 +432,28 @@ export default function Home1() {
                 type="button"
                 className="
                   flex
-                  h-[46px]
+                  h-10.5
                   w-full
                   items-center
                   justify-center
                   gap-2
                   rounded-lg
                   border-0
-                  bg-yellow-400
-                  text-[12px]
-                  font-bold
-                  !text-black
+                  bg-green-400
+                  text-md
+                  font-semibold
+                  text-green-50!
                   shadow-[0_6px_18px_rgba(250,204,21,.25)]
                   transition-all
                   duration-300
 
-                  hover:-translate-y-[2px]
-                  hover:bg-yellow-500
+                  hover:-translate-y-0.5
+                  hover:bg-green-500
                 "
               >
-                Check Fare
+                Book Now
 
-                <FaCar className="text-[12px]" />
+                <FaWhatsapp size={24}  />
               </button>
             </div>
           </div>

@@ -46,7 +46,7 @@ export default function Home3() {
           mx-auto
           grid
           w-full
-          max-w-[1400px]
+          max-w-350
           grid-cols-1
           px-4
 
