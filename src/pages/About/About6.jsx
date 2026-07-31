@@ -119,9 +119,9 @@ export default function About6() {
 
                 </div>
 
-                <button className="mt-8 w-full rounded-xl bg-[#FBBF24] py-3 font-semibold text-black transition hover:bg-yellow-500">
+                {/* <button className="mt-8 w-full rounded-xl bg-[#FBBF24] py-3 font-semibold text-black transition hover:bg-yellow-500">
                   Book This Vehicle
-                </button>
+                </button> */}
 
               </div>
             </div>
