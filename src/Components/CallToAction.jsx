@@ -57,7 +57,7 @@ export default function CallToAction() {
               href="tel:+919876543210"
               className="group flex items-center gap-4 rounded-2xl bg-white/5 p-4 transition-all duration-300 hover:bg-yellow-400 hover:text-black"
             >
-              <div className="flex h-14 w-14 items-center justify-center rounded-full bg-yellow-400 text-black shadow-lg transition-transform duration-300 group-hover:scale-110 group-hover:bg-white">
+              <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-full bg-yellow-400 text-black shadow-lg transition-transform duration-300 group-hover:scale-110 group-hover:bg-white">
                 <FaPhoneAlt />
               </div>
 
@@ -66,7 +66,7 @@ export default function CallToAction() {
                   Call Us Anytime
                 </p>
 
-                <h4 className="text-xl font-bold text-white group-hover:text-black ">
+                <h4 className="text-sm font-bold text-white group-hover:text-black sm:text-xl ">
                   +91 98765 43210
                 </h4>
               </div>
