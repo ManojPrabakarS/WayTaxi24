@@ -16,7 +16,7 @@ import {
 } from "react-icons/fa";
 
 export default function Home1() {
-  const [tripType, setTripType] = useState("oneway");
+  // const [tripType, setTripType] = useState("oneway");
 
   return (
     <section
@@ -27,7 +27,7 @@ export default function Home1() {
         bg-cover
         bg-center
         bg-no-repeat
-        pt-[90px]
+        pt-22
       "
       style={{
         backgroundImage: `url(${heroBg})`,
@@ -41,10 +41,10 @@ export default function Home1() {
           inset-0
           bg-black/50
 
-          lg:bg-gradient-to-r
+          lg:bg-linear-to-r
           lg:from-black/95
-          lg:via-black/70
-          lg:to-black/25
+          lg:via-black/50
+          lg:to-transparent
         "
       />
 
@@ -56,7 +56,7 @@ export default function Home1() {
           z-10
           mx-auto
           w-full
-          max-w-[1440px]
+          max-w-360
 
           px-4
           pb-6
@@ -81,7 +81,7 @@ export default function Home1() {
         <div
           className="
     w-full
-    max-w-[650px]
+    max-w-162.5
     pt-2
 
     sm:pt-3
@@ -102,19 +102,18 @@ export default function Home1() {
       bg-black/30
       px-3
       py-1.5
+      mb-1
     "
           >
-            <FaCar className="text-[10px] text-yellow-400" />
+            <FaCar className="text-[12px] text-yellow-400" />
 
             <span
               className="
-        text-[9px]
+        text-[11px]
         font-bold
         uppercase
         tracking-[0.7px]
         text-yellow-400
-
-        sm:text-[10px]
       "
             >
               ONE WAY JOURNEY. ONE WAY FARE
@@ -127,12 +126,13 @@ export default function Home1() {
             className="
       m-0
       mt-4
+      mb-2
       font-['Poppins']
       text-[35px]
       font-extrabold
       leading-[1.08]
       tracking-[-1.3px]
-      !text-white
+      text-white!
 
       sm:text-[42px]
       sm:tracking-[-1.5px]
@@ -162,21 +162,21 @@ export default function Home1() {
             className="
       m-0
       mt-4
-      max-w-[570px]
+      max-w-142.5
       font-['Poppins']
       text-[12px]
       font-normal
-      leading-[18px]
-      !text-gray-200
+      leading-4.5
+      text-gray-200!
 
       sm:text-[12px]
-      sm:leading-[20px]
+      sm:leading-5
 
       md:text-[13px]
-      md:leading-[21px]
+      md:leading-5.25
 
       lg:text-[14px]
-      lg:leading-[22px]
+      lg:leading-5.5
     "
           >
             Safe, reliable and affordable taxi service across India.
@@ -192,7 +192,7 @@ export default function Home1() {
       mt-4
       grid
       w-full
-      max-w-[650px]
+      max-w-162.5
       grid-cols-2
       gap-x-4
       gap-y-4
@@ -323,7 +323,7 @@ export default function Home1() {
               <FieldLabel>From</FieldLabel>
 
               <div className="booking-field">
-                <FaMapMarkerAlt className="mr-2 shrink-0 text-[13px] text-yellow-500" />
+                <FaMapMarkerAlt className="mr-2 shrink-0 text-[14px] text-yellow-500" />
 
                 <input
                   type="text"
@@ -333,7 +333,7 @@ export default function Home1() {
                     flex-1
                     border-0
                     bg-transparent
-                    text-[10px]
+                    text-[12px]
                     text-gray-800
                     outline-none
                     placeholder:text-gray-400
@@ -348,7 +348,7 @@ export default function Home1() {
               <FieldLabel>To</FieldLabel>
 
               <div className="booking-field">
-                <FaMapMarkerAlt className="mr-2 shrink-0 text-[13px] text-yellow-500" />
+                <FaMapMarkerAlt className="mr-2 shrink-0 text-[14px] text-yellow-500" />
 
                 <input
                   type="text"
@@ -358,7 +358,7 @@ export default function Home1() {
                     flex-1
                     border-0
                     bg-transparent
-                    text-[11px]
+                    text-[12px]
                     text-gray-800
                     outline-none
                     placeholder:text-gray-400
@@ -384,7 +384,7 @@ export default function Home1() {
                     flex-1
                     border-0
                     bg-transparent
-                    text-[10px]
+                    text-[12px]
                     text-gray-700
                     outline-none
                   "
@@ -443,7 +443,7 @@ export default function Home1() {
                   text-md
                   font-semibold
                   text-green-50!
-                  shadow-[0_6px_18px_rgba(250,204,21,.25)]
+                  shadow-[0_4px_12px_rgba(37,211,102,0.20)]
                   transition-all
                   duration-300
 
@@ -453,7 +453,7 @@ export default function Home1() {
               >
                 Book Now
 
-                <FaWhatsapp size={24}  />
+                <FaWhatsapp size={24} />
               </button>
             </div>
           </div>
@@ -591,11 +591,11 @@ function FieldLabel({ children }) {
   return (
     <label
       className="
-        mb-1.5
+        mb-1
         block
-        text-[10px]
+        text-[12px]
         font-semibold
-        !text-gray-600
+        text-gray-600!
       "
     >
       {children}
@@ -613,8 +613,8 @@ function HeroFeature({ icon, title, text }) {
       <div
         className="
           flex
-          h-[36px]
-          w-[36px]
+          h-10
+          w-10
           shrink-0
           items-center
           justify-center
@@ -622,16 +622,16 @@ function HeroFeature({ icon, title, text }) {
           border
           border-yellow-400
           bg-yellow-400/10
-          text-[12px]
-          !text-yellow-400
+          text-[20px]
+          text-yellow-400!
           transition-all
           duration-300
 
-          sm:h-[38px]
-          sm:w-[38px]
+          sm:h-10
+          sm:w-10
 
           group-hover:bg-yellow-400
-          group-hover:!text-black
+          group-hover:text-black!
         "
       >
         {icon}
@@ -642,17 +642,17 @@ function HeroFeature({ icon, title, text }) {
           className="
             m-0
             whitespace-nowrap
-            text-[9px]
+            text-[12px]
             font-bold
-            !text-white
+            text-white!
 
-            sm:text-[10px]
+            sm:text-[14px]
           "
         >
           {title}
         </p>
 
-        <p className="m-0 mt-[1px] text-[8px] !text-gray-300 sm:text-[9px]">
+        <p className="m-0 mt-px text-[11px] text-gray-300! sm:text-[12px]">
           {text}
         </p>
       </div>
@@ -678,24 +678,24 @@ function TrustCard({ icon, title, text }) {
         transition-all
         duration-300
 
-        sm:min-h-[95px]
+        sm:min-h-23.75
         sm:p-4
         sm:odd:border-r
 
-        lg:min-h-[100px]
+        lg:min-h-25
         lg:border-b-0
         lg:border-r
         lg:odd:border-r
         lg:last:border-r-0
 
-        hover:bg-white/[0.05]
+        hover:bg-white/5
       "
     >
       <div
         className="
           flex
-          h-[40px]
-          w-[40px]
+          h-10
+          w-10
           shrink-0
           items-center
           justify-center
@@ -703,13 +703,13 @@ function TrustCard({ icon, title, text }) {
           border
           border-yellow-400
           bg-yellow-400/10
-          text-[14px]
-          !text-yellow-400
+          text-[15px]
+          text-yellow-400!
           transition-all
           duration-300
 
           group-hover:bg-yellow-400
-          group-hover:!text-black
+          group-hover:text-black!
         "
       >
         {icon}
@@ -719,9 +719,9 @@ function TrustCard({ icon, title, text }) {
         <h3
           className="
             m-0
-            text-[11px]
+            text-[13px]
             font-bold
-            !text-white
+            text-white!
           "
         >
           {title}
@@ -731,9 +731,9 @@ function TrustCard({ icon, title, text }) {
           className="
             m-0
             mt-1
-            text-[9px]
-            leading-[15px]
-            !text-gray-300
+            text-[11px]
+            leading-3.75
+            text-gray-300!
           "
         >
           {text}
@@ -754,12 +754,12 @@ function SmallCheck({ text }) {
         flex
         items-center
         gap-1.5
-        text-[9px]
+        text-[12px]
         font-medium
-        !text-gray-500
+        text-gray-500!
       "
     >
-      <FaCheckCircle className="shrink-0 text-[10px] !text-yellow-500" />
+      <FaCheckCircle className="shrink-0 text-[12px] text-yellow-500!" />
 
       <span>{text}</span>
     </div>
