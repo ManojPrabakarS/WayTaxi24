@@ -126,10 +126,9 @@ const TC = () => {
                 key={index}
                 className="flex gap-5 rounded-2xl border border-gray-200 p-5 transition hover:border-yellow-400 hover:bg-yellow-50"
               >
-                <div className="flex h-12 w-12 items-center justify-center rounded-full bg-yellow-400 text-xl text-black">
+                <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-yellow-400 text-lg text-black sm:h-12 sm:w-12 sm:text-xl">
                   {item.icon}
                 </div>
-
                 <div>
                   <h4 className="text-lg font-bold text-gray-900">
                     {item.title}
