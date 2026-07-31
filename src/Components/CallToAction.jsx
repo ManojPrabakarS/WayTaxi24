@@ -76,7 +76,7 @@ export default function CallToAction() {
             </a>
 
             {/* Button */}
-            <button onClick={() => navigate("/booking")} className="group mt-6 flex w-full items-center justify-center gap-3 rounded-2xl bg-yellow-400 py-4 text-lg font-bold text-black transition-all duration-300 hover:scale-[1.03] hover:shadow-[0_10px_35px_rgba(250,204,21,.45)]">
+            <button onClick={() => navigate("/contact")} className="group mt-6 flex w-full items-center justify-center gap-3 rounded-2xl bg-yellow-400 py-4 text-lg font-bold text-black transition-all duration-300 hover:scale-[1.03] hover:shadow-[0_10px_35px_rgba(250,204,21,.45)]">
               Book Your Ride
               <FaArrowRight className="transition-transform duration-300 group-hover:translate-x-2" />
             </button>

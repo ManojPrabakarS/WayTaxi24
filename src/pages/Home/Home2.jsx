@@ -333,7 +333,7 @@ export default function Home2() {
           </div>
 
           <a
-            href="booking"
+            href="contact"
             className="
               group
               flex
