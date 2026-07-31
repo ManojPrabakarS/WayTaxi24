@@ -12,7 +12,7 @@ export default function CallToAction() {
 
         {/* Small Pattern */}
         <div className="absolute inset-0 opacity-5">
-          <div className="h-full w-full bg-[radial-gradient(circle_at_center,#facc15_1px,transparent_1px)] bg-[length:28px_28px]"></div>
+          <div className="h-full w-full bg-[radial-gradient(circle_at_center,#facc15_1px,transparent_1px)] bg-size-[28px_28px]"></div>
         </div>
 
         <div className="relative flex flex-col items-center justify-between gap-10 lg:flex-row">

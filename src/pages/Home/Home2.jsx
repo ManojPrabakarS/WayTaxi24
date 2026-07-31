@@ -92,7 +92,7 @@ export default function Home2() {
 
               sm:px-4
               sm:py-2
-              sm:text-[10px]
+              sm:text-[12px]
             "
           >
             Quick & Easy Booking
@@ -216,11 +216,10 @@ export default function Home2() {
                 text-gray-500!
 
                 sm:flex
-                sm:text-[10px]
+                sm:text-[12px]
               "
             >
-              <FaCheckCircle className="text-[#ffbd00]!" />
-
+              <FaCheckCircle className="text-[#ffbd00]!" size={15} />
               Clean & verified vehicles
             </div>
           </div>
