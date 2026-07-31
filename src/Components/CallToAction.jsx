@@ -54,7 +54,7 @@ export default function CallToAction() {
 
             {/* Phone */}
             <a
-              href="tel:+919876543210"
+              href="tel:+919500008304"
               className="group flex items-center gap-4 rounded-2xl bg-white/5 p-4 transition-all duration-300 hover:bg-yellow-400 hover:text-black"
             >
               <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full sm:h-10 sm:w-10 bg-yellow-400 text-black shadow-lg transition-transform duration-300 group-hover:scale-110 group-hover:bg-white">
