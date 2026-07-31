@@ -97,19 +97,19 @@ function StatCard({ icon, number, title, index }) {
         transition-all
         duration-300
 
-        min-[480px]:min-h-[105px]
+        min-[480px]:min-h-26.25
         min-[480px]:justify-center
         min-[480px]:gap-3
         min-[480px]:px-3
 
-        sm:min-h-[110px]
+        sm:min-h-27.5
         sm:gap-4
         sm:px-4
 
-        md:min-h-[115px]
+        md:min-h-28.75
         md:px-5
 
-        lg:min-h-[120px]
+        lg:min-h-30
         lg:border-b-0
         lg:border-r
         lg:px-5
@@ -125,8 +125,8 @@ function StatCard({ icon, number, title, index }) {
       <div
         className="
           flex
-          h-[45px]
-          w-[45px]
+          h-11.25
+          w-11.25
           shrink-0
           items-center
           justify-center
@@ -134,34 +134,34 @@ function StatCard({ icon, number, title, index }) {
           bg-[#ffbd00]/10
 
           text-[22px]
-          !text-[#ffbd00]
+          text-[#ffbd00]!
 
           transition-all
           duration-300
 
-          min-[480px]:h-[46px]
-          min-[480px]:w-[46px]
+          min-[480px]:h-11.5
+          min-[480px]:w-11.5
           min-[480px]:text-[23px]
 
-          sm:h-[48px]
-          sm:w-[48px]
+          sm:h-12
+          sm:w-12
           sm:text-[24px]
 
-          md:h-[50px]
-          md:w-[50px]
+          md:h-12.5
+          md:w-12.5
           md:text-[26px]
 
-          lg:h-[52px]
-          lg:w-[52px]
+          lg:h-13
+          lg:w-13
           lg:text-[27px]
 
-          xl:h-[54px]
-          xl:w-[54px]
+          xl:h-13.5
+          xl:w-13.5
           xl:text-[28px]
 
           group-hover:-translate-y-1
           group-hover:bg-[#ffbd00]
-          group-hover:!text-[#071016]
+          group-hover:text-[#071016]!
         "
       >
         {icon}
@@ -187,7 +187,7 @@ function StatCard({ icon, number, title, index }) {
             text-[18px]
             font-bold
             leading-none
-            !text-[#ffbd00]
+            text-[#ffbd00]!
 
             min-[480px]:text-[17px]
 
@@ -209,24 +209,24 @@ function StatCard({ icon, number, title, index }) {
             font-['Poppins']
             text-[10px]
             font-medium
-            leading-[15px]
-            !text-white
+            leading-3.75
+            text-white!
 
-            min-[480px]:max-w-[120px]
+            min-[480px]:max-w-30
             min-[480px]:text-[9px]
-            min-[480px]:leading-[14px]
+            min-[480px]:leading-3.5
 
-            sm:max-w-[135px]
+            sm:max-w-33.75
             sm:text-[10px]
-            sm:leading-[15px]
+            sm:leading-3.75
 
-            md:max-w-[145px]
+            md:max-w-36.25
 
-            lg:max-w-[150px]
+            lg:max-w-37.5
             lg:text-[10px]
-            lg:leading-[16px]
+            lg:leading-4
 
-            xl:text-[11px]
+            xl:text-[12px]
           "
         >
           {title}

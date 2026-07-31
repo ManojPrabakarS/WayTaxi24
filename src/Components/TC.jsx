@@ -90,16 +90,16 @@ const TC = () => {
 
 
         {/* Heading */}
-        <div className="mb-10 text-center">
-          <span className="rounded-full bg-yellow-400 px-4 py-2 text-sm font-bold uppercase text-black">
+        <div className="mb-10 flex flex-col items-center gap-1 text-center">
+          <span className="rounded-full bg-yellow-400 px-4 py-2 text-sm font-bold text-black">
             {data.badge}
           </span>
 
-          <h2 className="mt-5 text-3xl font-extrabold text-gray-900 md:text-4xl">
+          <h2 className="text-3xl font-extrabold text-gray-900 md:text-4xl">
             {data.heading}
           </h2>
 
-          <p className="mt-3 text-gray-600">
+          <p className="max-w-2xl text-gray-600">
             {data.subtitle}
           </p>
         </div>
@@ -107,7 +107,7 @@ const TC = () => {
         {/* Terms Card */}
         <div className="overflow-hidden rounded-3xl bg-white shadow-xl">
 
-          <div className="flex items-center justify-between bg-gradient-to-r from-yellow-400 to-yellow-300 px-6 py-4">
+          <div className="flex items-center justify-between bg-linear-to-r from-yellow-400 to-yellow-300 px-6 py-4">
             <h3 className="text-xl font-bold text-black">
               {data.badge}
             </h3>
@@ -117,7 +117,7 @@ const TC = () => {
               className="flex h-10 items-center gap-2 rounded-full bg-white px-3 text-sm font-semibold text-black shadow transition hover:scale-105"
             >
               <FaGlobeAsia className="text-base" />
-              <span>{lang === "en" ? "EN" : "த"}</span>
+              <span>{lang === "en" ? "EN" : "தமிழ்"}</span>
             </button>
           </div>
           <div className="space-y-5 p-8">
