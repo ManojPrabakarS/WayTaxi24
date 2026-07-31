@@ -82,9 +82,9 @@ export default function Navbar() {
         className="
           mx-auto
           flex
-          h-[90px]
+          h-22.5
           w-full
-          max-w-[1440px]
+          max-w-360
           items-center
           justify-between
           px-4
@@ -125,12 +125,12 @@ export default function Navbar() {
               alt="WayTaxi24"
               className="
                 h-auto
-                w-[155px]
+                w-38.75
                 object-contain
-                sm:w-[170px]
-                md:w-[185px]
-                lg:w-[210px]
-                xl:w-[220px]
+                sm:w-42.5
+                md:w-46.25
+                lg:w-52.5
+                xl:w-55
               "
             />
           </Link>
@@ -187,8 +187,8 @@ export default function Navbar() {
 
                     ${
                       isActive
-                        ? "!text-[#FBBF24]"
-                        : "!text-[#18181B] hover:!text-[#FBBF24]"
+                        ? "text-[#FBBF24]!"
+                        : "text-[#18181B]! hover:text-[#FBBF24]!"
                     }
                   `
                 }
@@ -202,9 +202,9 @@ export default function Navbar() {
                     <span
                       className={`
                         absolute
-                        -bottom-[7px]
+                        -bottom-1.75
                         left-1/2
-                        h-[2px]
+                        h-0.5
                         -translate-x-1/2
                         rounded-full
                         bg-[#FBBF24]
@@ -213,8 +213,8 @@ export default function Navbar() {
 
                         ${
                           isActive
-                            ? "w-[18px]"
-                            : "w-0 group-hover:w-[18px]"
+                            ? "w-4.5"
+                            : "w-0 group-hover:w-4.5"
                         }
                       `}
                     />
@@ -256,7 +256,7 @@ export default function Navbar() {
           {/* ================= PHONE ================= */}
 
           <motion.a
-            href="tel:+919876543210"
+            href="tel:+919500008304"
             whileHover={{
               y: -2,
               scale: 1.02,
@@ -270,7 +270,7 @@ export default function Navbar() {
             className="
               group
               flex
-              h-[43px]
+              h-10.75
               items-center
               gap-2.5
               rounded-full
@@ -279,7 +279,7 @@ export default function Navbar() {
               bg-white
               px-5
               no-underline
-              !text-[#18181B]
+              text-[#18181B]!
               text-[13px]
               font-semibold
               transition-colors
@@ -287,7 +287,7 @@ export default function Navbar() {
 
               hover:border-[#FBBF24]
               hover:bg-[#FFFBEB]
-              hover:!text-[#18181B]
+              hover:text-[#18181B]!
             "
           >
             <motion.span
@@ -300,7 +300,7 @@ export default function Navbar() {
             </motion.span>
 
             <span>
-              +91 98765 43210
+              +91 95000 08304
             </span>
           </motion.a>
 
@@ -324,7 +324,7 @@ export default function Navbar() {
               className="
                 relative
                 flex
-                h-[43px]
+                h-10.75
                 items-center
                 justify-center
                 overflow-hidden
@@ -332,7 +332,7 @@ export default function Navbar() {
                 bg-[#FBBF24]
                 px-6
                 no-underline
-                !text-[#111111]
+                text-[#111111]!
                 text-[13px]
                 font-bold
                 shadow-[0_5px_18px_rgba(251,191,36,0.25)]
@@ -340,7 +340,7 @@ export default function Navbar() {
                 duration-300
 
                 hover:bg-[#F59E0B]
-                hover:!text-[#111111]
+                hover:text-[#111111]!
                 hover:shadow-[0_8px_25px_rgba(251,191,36,0.40)]
               "
             >
@@ -475,7 +475,7 @@ export default function Navbar() {
             className="
               absolute
               left-0
-              top-[90px]
+              top-22.5
               w-full
               overflow-hidden
               border-t
@@ -485,7 +485,7 @@ export default function Navbar() {
               lg:hidden
             "
           >
-            <div className="mx-auto max-w-[1450px] px-5 py-5">
+            <div className="mx-auto max-w-362.5 px-5 py-5">
 
               {/* ================= MOBILE LINKS ================= */}
 
@@ -524,8 +524,8 @@ export default function Navbar() {
 
                           ${
                             isActive
-                              ? "!text-[#FBBF24]"
-                              : "!text-[#18181B] hover:pl-2 hover:!text-[#FBBF24]"
+                              ? "text-[#FBBF24]!"
+                              : "text-[#18181B]! hover:pl-2 hover:text-[#FBBF24]!"
                           }
                         `
                       }
@@ -556,7 +556,7 @@ export default function Navbar() {
                 whileTap={{
                   scale: 0.97,
                 }}
-                href="tel:+919876543210"
+                href="tel:+919500008304"
                 className="
                   mt-5
                   flex
@@ -569,7 +569,7 @@ export default function Navbar() {
                   bg-white
                   py-3
                   no-underline
-                  !text-[#18181B]
+                  text-[#18181B]!
                   text-[13px]
                   font-semibold
                   transition-colors
@@ -581,7 +581,7 @@ export default function Navbar() {
               >
                 <FaPhoneAlt className="text-[#FBBF24]" />
 
-                +91 98765 43210
+                +91 95000 08304
               </motion.a>
 
 
@@ -615,7 +615,7 @@ export default function Navbar() {
                     py-3
                     text-center
                     no-underline
-                    !text-[#111111]
+                    text-[#111111]!
                     text-[14px]
                     font-bold
                     shadow-[0_5px_15px_rgba(251,191,36,0.20)]
@@ -623,7 +623,7 @@ export default function Navbar() {
                     duration-300
 
                     hover:bg-[#F59E0B]
-                    hover:!text-[#111111]
+                    hover:text-[#111111]!
                   "
                 >
                   Book a Ride

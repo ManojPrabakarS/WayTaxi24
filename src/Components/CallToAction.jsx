@@ -67,7 +67,7 @@ export default function CallToAction() {
                 </p>
 
                 <h4 className="text-sm font-bold text-white group-hover:text-black sm:text-xl ">
-                  +91 98765 43210
+                  +91 95000 08304
                 </h4>
               </div>
             </a>
