@@ -7,6 +7,7 @@ import {
   FaPhoneAlt,
 } from "react-icons/fa";
 import CallToAction from "../../Components/CallToAction";
+import TC from "../../Components/TC";
 
 export default function Home4() {
   const features = [
@@ -32,29 +33,6 @@ export default function Home4() {
     },
   ];
 
-  const reviews = [
-    {
-      name: "Rahul",
-      city: "Chennai",
-      img: "https://i.pravatar.cc/100?img=10",
-      review:
-        "Excellent taxi service. Driver arrived on time and the ride was very comfortable.",
-    },
-    {
-      name: "Priya",
-      city: "Bangalore",
-      img: "https://i.pravatar.cc/100?img=15",
-      review:
-        "Affordable price and clean cab. Highly recommend WayTaxi24.",
-    },
-    {
-      name: "Arun",
-      city: "Coimbatore",
-      img: "https://i.pravatar.cc/100?img=20",
-      review:
-        "Booking process was very easy. Fantastic customer support.",
-    },
-  ];
 
   return (
     <section className="bg-[#f8f9fa] py-4 md:py-20 lg:py-24 overflow-hidden">
@@ -133,69 +111,8 @@ group-hover:rotate-12
 
         </div>
 
-        <div className="mt-3">
 
-          <p className="text-yellow-500 text-center font-semibold uppercase tracking-widest">
-            Testimonials
-          </p>
-
-          <h2 className="text-4xl font-bold text-center mt-3">
-            What Our Customers Say
-          </h2>
-
-          <div className="grid lg:grid-cols-3 gap-8 mt-3">
-
-            {reviews.map((item, index) => (
-
-              <div
-                key={index}
-                className="bg-white rounded-3xl p-5 shadow-lg hover:shadow-2xl transition"
-              >
-
-                <div className="flex text-yellow-400 mb-2">
-
-                  <FaStar />
-                  <FaStar />
-                  <FaStar />
-                  <FaStar />
-                  <FaStar />
-
-                </div>
-
-                <p className="text-gray-600 leading-8">
-                  {item.review}
-                </p>
-
-                <div className="flex items-center mt-8">
-
-                  <img
-                    src={item.img}
-                    alt={item.name}
-                    className="w-16 h-16 rounded-full"
-                  />
-
-                  <div className="ml-4">
-
-                    <h4 className="font-bold text-lg">
-                      {item.name}
-                    </h4>
-
-                    <p className="text-gray-500">
-                      {item.city}
-                    </p>
-
-                  </div>
-
-                </div>
-
-              </div>
-
-            ))}
-
-          </div>
-
-        </div>
-
+        <TC />
         <CallToAction />
 
       </div>
