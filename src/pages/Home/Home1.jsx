@@ -492,47 +492,49 @@ export default function Home1() {
 
         {/* ================= TRUST CARDS ================= */}
 
-        <div
-          className="
-    mt-4
+<div
+  className="
+    mt-8
     grid
     w-full
     grid-cols-1
     overflow-hidden
-    rounded-xl
+    rounded-2xl
     border
     border-white/20
     bg-[#071016]/95
-    shadow-lg
+    shadow-2xl
     backdrop-blur-md
 
     sm:grid-cols-2
     lg:grid-cols-4
   "
-        >
-          <TrustCard
-            icon={<FaCar />}
-            title="Well Maintained Cabs"
-            text="Clean and comfortable vehicles for a smooth journey."
-          />
+>
 
-          <TrustCard
-            icon={<FaUserCheck />}
-            title="Verified Drivers"
-            text="Professional and experienced drivers for your safety."
-          />
+  
+         <TrustCard
+  icon={<FaCar className="text-5xl" />}
+  title="Well Maintained Cabs"
+  text="Clean and comfortable vehicles for a smooth journey."
+/>
 
-          <TrustCard
-            icon={<FaMapMarkerAlt />}
-            title="On Time Pickup"
-            text="Punctual pickup and timely drop for every booking."
-          />
+<TrustCard
+  icon={<FaUserCheck className="text-5xl" />}
+  title="Verified Drivers"
+  text="Professional and experienced drivers for your safety."
+/>
 
-          <TrustCard
-            icon={<FaHeadset />}
-            title="24/7 Customer Support"
-            text="Our support team is available whenever you need us."
-          />
+<TrustCard
+  icon={<FaMapMarkerAlt className="text-5xl" />}
+  title="On Time Pickup"
+  text="Punctual pickup and timely drop for every booking."
+/>
+
+<TrustCard
+  icon={<FaHeadset className="text-5xl" />}
+  title="24/7 Customer Support"
+  text="Our support team is available whenever you need us."
+/>
         </div>
       </div>
     </section>
