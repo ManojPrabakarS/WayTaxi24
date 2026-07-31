@@ -492,49 +492,47 @@ export default function Home1() {
 
         {/* ================= TRUST CARDS ================= */}
 
-<div
-  className="
-    mt-8
+        <div
+          className="
+    mt-4
     grid
     w-full
     grid-cols-1
     overflow-hidden
-    rounded-2xl
+    rounded-xl
     border
     border-white/20
     bg-[#071016]/95
-    shadow-2xl
+    shadow-lg
     backdrop-blur-md
 
     sm:grid-cols-2
     lg:grid-cols-4
   "
->
+        >
+          <TrustCard
+            icon={<FaCar />}
+            title="Well Maintained Cabs"
+            text="Clean and comfortable vehicles for a smooth journey."
+          />
 
-  
-         <TrustCard
-  icon={<FaCar className="text-5xl" />}
-  title="Well Maintained Cabs"
-  text="Clean and comfortable vehicles for a smooth journey."
-/>
+          <TrustCard
+            icon={<FaUserCheck />}
+            title="Verified Drivers"
+            text="Professional and experienced drivers for your safety."
+          />
 
-<TrustCard
-  icon={<FaUserCheck className="text-5xl" />}
-  title="Verified Drivers"
-  text="Professional and experienced drivers for your safety."
-/>
+          <TrustCard
+            icon={<FaMapMarkerAlt />}
+            title="On Time Pickup"
+            text="Punctual pickup and timely drop for every booking."
+          />
 
-<TrustCard
-  icon={<FaMapMarkerAlt className="text-5xl" />}
-  title="On Time Pickup"
-  text="Punctual pickup and timely drop for every booking."
-/>
-
-<TrustCard
-  icon={<FaHeadset className="text-5xl" />}
-  title="24/7 Customer Support"
-  text="Our support team is available whenever you need us."
-/>
+          <TrustCard
+            icon={<FaHeadset />}
+            title="24/7 Customer Support"
+            text="Our support team is available whenever you need us."
+          />
         </div>
       </div>
     </section>
@@ -552,7 +550,7 @@ function TripButton({ active, onClick, icon, children }) {
       onClick={onClick}
       className={`
         flex
-        h-[40px]
+        h-10
         w-full
         items-center
         justify-center
@@ -566,11 +564,11 @@ function TripButton({ active, onClick, icon, children }) {
         duration-300
 
         sm:w-auto
-        sm:min-w-[140px]
+        sm:min-w-35
 
         ${active
-          ? "bg-yellow-400 !text-black"
-          : "bg-gray-100 !text-gray-700 hover:bg-yellow-50 hover:!text-yellow-600"
+          ? "bg-yellow-400 text-black!"
+          : "bg-gray-100 text-gray-700! hover:bg-yellow-50 hover:text-yellow-600!"
         }
       `}
     >
