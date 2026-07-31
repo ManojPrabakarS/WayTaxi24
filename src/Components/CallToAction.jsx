@@ -1,6 +1,9 @@
 import { FaPhoneAlt, FaArrowRight, FaTaxi } from "react-icons/fa";
+import { useNavigate } from "react-router-dom";
 
 export default function CallToAction() {
+  const navigate = useNavigate();
+
   return (
     <section className="my-16">
       <div className="relative overflow-hidden rounded-4xl bg-[#0f0f0f] px-8 py-10 shadow-[0_25px_60px_rgba(0,0,0,.35)]">
@@ -73,7 +76,7 @@ export default function CallToAction() {
             </a>
 
             {/* Button */}
-            <button className="group mt-6 flex w-full items-center justify-center gap-3 rounded-2xl bg-yellow-400 py-4 text-lg font-bold text-black transition-all duration-300 hover:scale-[1.03] hover:shadow-[0_10px_35px_rgba(250,204,21,.45)]">
+            <button onClick={() => navigate("/booking")} className="group mt-6 flex w-full items-center justify-center gap-3 rounded-2xl bg-yellow-400 py-4 text-lg font-bold text-black transition-all duration-300 hover:scale-[1.03] hover:shadow-[0_10px_35px_rgba(250,204,21,.45)]">
               Book Your Ride
               <FaArrowRight className="transition-transform duration-300 group-hover:translate-x-2" />
             </button>

@@ -18,6 +18,57 @@ import {
 export default function Home1() {
   // const [tripType, setTripType] = useState("oneway");
 
+
+  const [formData, setFormData] = useState({
+
+
+    pickup: "",
+    drop: "",
+    date: "",
+    time: "",
+    
+  });
+
+  // Replace with your WhatsApp number
+  const whatsappNumber = "9894170320";
+
+  const handleChange = (e) => {
+    setFormData({
+      ...formData,
+      [e.target.name]: e.target.value,
+    });
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    const { pickup, drop, date, time } = formData;
+
+    if (!pickup || !drop || !date || !time) {
+      alert("Please fill all fields.");
+      return;
+    }
+const message = `CAB BOOKING REQUEST
+
+----------------------------------------
+Pickup Location : ${pickup}
+Drop Location   : ${drop}
+
+Travel Date     : ${date}
+Pickup Time     : ${time}
+----------------------------------------
+
+Please confirm the booking.
+
+Thank you,
+WayTaxi24`;
+
+    window.open(
+      `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`,
+      "_blank"
+    );
+  };
+
   return (
     <section
       className="
@@ -328,6 +379,9 @@ export default function Home1() {
                 <input
                   type="text"
                   placeholder="Enter pickup location"
+                  name="pickup"
+                  value={formData.pickup}
+                  onChange={handleChange}
                   className="
                     min-w-0
                     flex-1
@@ -353,6 +407,9 @@ export default function Home1() {
                 <input
                   type="text"
                   placeholder="Enter drop location"
+                  name="drop"
+                  value={formData.drop}
+                  onChange={handleChange}
                   className="
                     min-w-0
                     flex-1
@@ -379,6 +436,9 @@ export default function Home1() {
 
                 <input
                   type="date"
+                  name="date"
+                  value={formData.date}
+                  onChange={handleChange}
                   className="
                     min-w-0
                     flex-1
@@ -402,6 +462,9 @@ export default function Home1() {
 
                 <input
                   type="time"
+                  name="time"
+                  value={formData.time}
+                  onChange={handleChange}
                   className="
                     min-w-0
                     flex-1
@@ -430,6 +493,7 @@ export default function Home1() {
             >
               <button
                 type="button"
+                onClick={handleSubmit}
                 className="
                   flex
                   h-10.5

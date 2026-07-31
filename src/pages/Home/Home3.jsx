@@ -9,22 +9,22 @@ export default function Home3() {
   const stats = [
     {
       icon: <FaUsers />,
-      number: "10,000+",
+      number: "1000+",
       title: "Happy Customers",
     },
     {
       icon: <FaUserTie />,
-      number: "500+",
+      number: "100+",
       title: "Professional Drivers",
     },
     {
       icon: <FaChartLine />,
-      number: "1,500+",
+      number: "500+",
       title: "Trips Completed Daily",
     },
     {
       icon: <FaShieldAlt />,
-      number: "50+",
+      number: "150+",
       title: "Destinations Covered",
     },
   ];

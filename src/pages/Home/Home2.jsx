@@ -17,7 +17,7 @@ import innova from "../../assets/7seater.png";
 import carens from '../../assets/Carens.png'
 import { FaBagShopping } from "react-icons/fa6";
 export default function Home2() {
-  const [selectedCab, setSelectedCab] = useState("SUV");
+  const [selectedCab, setSelectedCab] = useState("");
 
   const cars = [
     {
@@ -333,7 +333,7 @@ export default function Home2() {
           </div>
 
           <a
-            href="#booking"
+            href="booking"
             className="
               group
               flex
