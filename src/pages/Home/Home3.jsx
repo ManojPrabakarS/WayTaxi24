@@ -4,27 +4,33 @@ import {
   FaChartLine,
   FaShieldAlt,
 } from "react-icons/fa";
+import { useState, useEffect, useRef } from "react";
 
 export default function Home3() {
+
   const stats = [
     {
       icon: <FaUsers />,
-      number: "1000+",
+      number: 1000,
+      suffix: "+",
       title: "Happy Customers",
     },
     {
       icon: <FaUserTie />,
-      number: "100+",
+      number: 100,
+      suffix: "+",
       title: "Professional Drivers",
     },
     {
       icon: <FaChartLine />,
-      number: "500+",
+      number: 500,
+      suffix: "+",
       title: "Trips Completed Daily",
     },
     {
       icon: <FaShieldAlt />,
-      number: "150+",
+      number: 150,
+      suffix: "+",
       title: "Destinations Covered",
     },
   ];
@@ -64,6 +70,7 @@ export default function Home3() {
             key={index}
             icon={stat.icon}
             number={stat.number}
+            suffix={stat.suffix}
             title={stat.title}
             index={index}
           />
@@ -78,7 +85,7 @@ export default function Home3() {
    STAT CARD
 ========================================================= */
 
-function StatCard({ icon, number, title, index }) {
+function StatCard({ icon, number, title, index, suffix }) {
   return (
     <div
       className={`
@@ -197,7 +204,11 @@ function StatCard({ icon, number, title, index }) {
             xl:text-[22px]
           "
         >
-          {number}
+          <Counter
+            end={number}
+            suffix={suffix}
+            duration={2000}
+          />
         </h3>
 
         {/* TITLE */}
@@ -233,5 +244,63 @@ function StatCard({ icon, number, title, index }) {
         </p>
       </div>
     </div>
+  );
+}
+
+
+
+// ================================
+
+// Counter 
+
+// ================================
+
+
+function Counter({ end, duration = 2000, suffix = "" }) {
+  const [count, setCount] = useState(0);
+  const ref = useRef(null);
+  const started = useRef(false);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (!entry.isIntersecting || started.current) return;
+
+        started.current = true;
+
+        let startTime = null;
+
+        const animate = (time) => {
+          if (!startTime) startTime = time;
+
+          const progress = Math.min((time - startTime) / duration, 1);
+
+          // Ease Out
+          const eased = 1 - Math.pow(1 - progress, 3);
+
+          setCount(Math.floor(eased * end));
+
+          if (progress < 1) {
+            requestAnimationFrame(animate);
+          } else {
+            setCount(end);
+          }
+        };
+
+        requestAnimationFrame(animate);
+      },
+      { threshold: 0.4 }
+    );
+
+    if (ref.current) observer.observe(ref.current);
+
+    return () => observer.disconnect();
+  }, [end, duration]);
+
+  return (
+    <span ref={ref}>
+      {count.toLocaleString()}
+      {suffix}
+    </span>
   );
 }
