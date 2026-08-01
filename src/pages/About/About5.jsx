@@ -87,9 +87,7 @@ export default function About5() {
                 {service.description}
               </p>
 
-              <button className="mt-8 font-semibold text-[#FBBF24] transition-all duration-300 group-hover:translate-x-2">
-                Learn More →
-              </button>
+             
             </div>
           ))}
         </div>

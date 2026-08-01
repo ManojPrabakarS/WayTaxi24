@@ -1,83 +1,119 @@
 import {
-  FaCarSide,
   FaUserShield,
   FaClock,
   FaHeadset,
+  FaRupeeSign,
 } from "react-icons/fa";
+
+import aboutImg from "../../assets/a1.png";
 
 const features = [
   {
-    icon: <FaCarSide />,
-    title: "Well Maintained Cabs",
-    description:
-      "Our fleet is regularly serviced, cleaned, and sanitized to ensure every ride is comfortable and safe.",
-  },
-  {
     icon: <FaUserShield />,
     title: "Verified Drivers",
-    description:
-      "All our drivers are experienced, background-verified, and committed to providing a professional travel experience.",
+    text: "Experienced and background-verified drivers for safe journeys.",
   },
   {
     icon: <FaClock />,
-    title: "On-Time Pickup",
-    description:
-      "We value your time with prompt pickups and reliable drop-offs for every booking.",
+    title: "On Time Pickup",
+    text: "Always punctual with real-time booking confirmation.",
   },
   {
     icon: <FaHeadset />,
-    title: "24/7 Customer Support",
-    description:
-      "Our dedicated support team is available round the clock to assist you whenever you need help.",
+    title: "24/7 Support",
+    text: "Dedicated customer support whenever you need assistance.",
+  },
+  {
+    icon: <FaRupeeSign />,
+    title: "Affordable Fare",
+    text: "Transparent pricing with no hidden charges.",
   },
 ];
 
 export default function About3() {
   return (
-    <section className="bg-[#0B1117] py-20">
-      <div className="mx-auto max-w-7xl px-6">
+    <section className="py-20 bg-[#f8f9fb]">
+      <div className="max-w-7xl mx-auto px-6">
 
-        {/* Heading */}
-        <div className="mx-auto max-w-3xl text-center">
-          <span className="inline-block rounded-full bg-yellow-400/10 px-5 py-2 text-sm font-semibold uppercase tracking-[3px] text-[#FBBF24]">
-            Why Choose Us
-          </span>
+        <div className="grid lg:grid-cols-2 gap-16 items-center">
 
-          <h2 className="mt-5 text-4xl font-extrabold text-white md:text-5xl">
-            Experience the
-            <span className="text-[#FBBF24]"> WayTaxi24 Difference</span>
-          </h2>
+  {/* LEFT CONTENT */}
 
-          <p className="mt-6 text-lg leading-8 text-gray-300">
-            We are committed to providing a premium travel experience with
-            trusted drivers, clean vehicles, affordable pricing, and exceptional
-            customer support.
-          </p>
+  <div>
+
+    <span className="uppercase tracking-[4px] text-[#FBBF24] font-semibold">
+      Why Choose Us
+    </span>
+
+    <h2 className="mt-4 text-4xl lg:text-5xl font-bold text-gray-900 leading-tight">
+      Trusted Taxi Partner For Every Journey
+    </h2>
+
+    <p className="mt-6 text-gray-600 leading-8 text-lg">
+      WayTaxi24 provides premium taxi services with professional
+      drivers, comfortable vehicles, transparent pricing and
+      reliable customer support across Tamil Nadu.
+    </p>
+
+    <div className="mt-10 space-y-6">
+
+      {features.map((item, index) => (
+
+        <div
+          key={index}
+          className="flex gap-5 items-start rounded-2xl bg-white p-5 shadow-md transition-all duration-300 hover:-translate-y-1 hover:shadow-xl"
+        >
+
+          <div className="flex h-16 w-16 flex-shrink-0 items-center justify-center rounded-xl bg-[#FBBF24] text-3xl text-black">
+            {item.icon}
+          </div>
+
+          <div>
+
+            <h3 className="text-xl font-semibold text-gray-900">
+              {item.title}
+            </h3>
+
+            <p className="mt-2 leading-7 text-gray-600">
+              {item.text}
+            </p>
+
+          </div>
+
         </div>
 
-        {/* Cards */}
-        <div className="mt-16 grid gap-8 md:grid-cols-2 xl:grid-cols-4">
+      ))}
 
-          {features.map((item, index) => (
-            <div
-              key={index}
-              className="group rounded-2xl border border-white/10 bg-white/5 p-8 transition-all duration-300 hover:-translate-y-2 hover:border-[#FBBF24] hover:bg-[#111827]"
-            >
-              <div className="flex h-20 w-20 items-center justify-center rounded-full bg-yellow-400/10 text-4xl text-[#FBBF24] transition-all duration-300 group-hover:bg-[#FBBF24] group-hover:text-black">
-                {item.icon}
-              </div>
+    </div>
 
-              <h3 className="mt-8 text-2xl font-bold text-white">
-                {item.title}
-              </h3>
+  </div>
 
-              <p className="mt-4 text-base leading-7 text-gray-300">
-                {item.description}
-              </p>
-            </div>
-          ))}
+  {/* RIGHT IMAGE */}
 
-        </div>
+  <div className="relative">
+
+    <img
+      src={aboutImg}
+      alt="Taxi Service"
+      className="h-[600px] w-full rounded-3xl object-cover shadow-2xl"
+    />
+
+    <div className="absolute bottom-8 left-8 rounded-2xl bg-[#FBBF24] px-8 py-6 shadow-xl">
+
+      <h2 className="text-5xl font-bold text-black">
+        10+
+      </h2>
+
+      <p className="font-medium text-black">
+        Years Experience
+      </p>
+
+    </div>
+
+  </div>
+
+</div>
+
       </div>
     </section>
   );

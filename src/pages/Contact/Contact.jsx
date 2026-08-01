@@ -63,7 +63,7 @@ Please confirm the booking availability.
 Thank you!
 `;
 
-        const phoneNumber = "919500008304"; // Replace with your WhatsApp number
+        const phoneNumber = "919944817224"; // Replace with your WhatsApp number
 
         window.open(
             `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`,
