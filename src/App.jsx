@@ -10,11 +10,13 @@ import Service from "./pages/Services/Service";
 import Contact from "./pages/Contact/Contact";
 import ErrorPage from "./pages/Error/ErrorPage";
 
+import ScrollToTop from "./Service/ScrollToTop";
 export default function App() {
-  
+
 
   return (
     <BrowserRouter>
+      <ScrollToTop />
       <Navbar />
 
       <Routes>
