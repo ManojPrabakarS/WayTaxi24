@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
-import LoadingScreen from "./components/LoadingScreen";
+import LoadingScreen from "./Components/Loading";
 
 import Home from "./pages/Home/Home";
 import About from "./pages/About/About";
