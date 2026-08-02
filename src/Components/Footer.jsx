@@ -31,7 +31,7 @@ export default function Footer() {
   const socialIcons = [
     {
       icon: FaFacebookF,
-      link: "https://www.facebook.com/yourpage",
+      link: "https://www.facebook.com/profile.php?id=61592409315646",
     },
     {
       icon: FaInstagram,
@@ -219,10 +219,10 @@ export default function Footer() {
                   </h4>
 
                   <a
-                    href="mailto:support@waytaxi24.com"
+                    href="mailto:waytaxi24@gmail.com"
                     className="mt-1 block text-sm text-gray-300 transition hover:text-yellow-400"
                   >
-                    support@waytaxi24.com
+                    waytaxi24@gmail.com
                   </a>
 
                 </div>

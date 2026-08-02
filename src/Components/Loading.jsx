@@ -1,6 +1,8 @@
+import { useState } from "react";
 import Logo from "../assets/calogo.png";
 
 function Loading() {
+  const [loaded, setLoaded] = useState(false);
   return (
     <>
       <style>{`
@@ -105,7 +107,9 @@ function Loading() {
             <img
               src={Logo}
               alt="WayTaxi24"
-              className="logo"
+              onLoad={() => setLoaded(true)}
+              className={`logo transition-all duration-700 ${loaded ? "opacity-100 scale-100" : "opacity-0 scale-90"
+                }`}
             />
           </div>
           <div className="mt-4 flex flex-col items-center">
