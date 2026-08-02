@@ -196,7 +196,7 @@ Cab Type: ${cabType}`;
                   {/* Route: pickup -> drop with animated connector */}
                   <div className="relative pl-8">
                     <svg
-                      className="absolute left-[9px] top-3 h-[calc(100%-24px)] w-px"
+                      className="absolute left-2.25 top-3 h-[calc(100%-24px)] w-px"
                       width="2"
                       height="100%"
                       preserveAspectRatio="none"
@@ -211,8 +211,8 @@ Cab Type: ${cabType}`;
                         className="route-dash"
                       />
                     </svg>
-                    <span className="absolute left-0 top-3 h-[9px] w-[9px] rounded-full border-2 border-[#FFC93C] bg-[#131B2E]" />
-                    <span className="absolute -bottom-1 left-[1px] h-[9px] w-[9px] rounded-full bg-[#FF9B42]" />
+                    <span className="absolute left-0 top-3 h-2.25 w-2.25 rounded-full border-2 border-[#FFC93C] bg-[#131B2E]" />
+                    <span className="absolute -bottom-1 left-px h-2.25 w-2.25 rounded-full bg-[#FF9B42]" />
 
                     <div className="space-y-3">
                       <input
@@ -244,7 +244,7 @@ Cab Type: ${cabType}`;
                         name="date"
                         value={formData.date}
                         onChange={handleChange}
-                        className="w-full rounded-xl border border-white/10 bg-[#0B1120] px-4 py-3 text-sm text-[#F4F6FB] outline-none transition focus:border-[#FFC93C]/60 focus:ring-1 focus:ring-[#FFC93C]/40 [color-scheme:dark]"
+                        className="w-full rounded-xl border border-white/10 bg-[#0B1120] px-4 py-3 text-sm text-[#F4F6FB] outline-none transition focus:border-[#FFC93C]/60 focus:ring-1 focus:ring-[#FFC93C]/40 scheme-dark"
                       />
                     </div>
                     <div>
@@ -256,7 +256,7 @@ Cab Type: ${cabType}`;
                         name="time"
                         value={formData.time}
                         onChange={handleChange}
-                        className="w-full rounded-xl border border-white/10 bg-[#0B1120] px-4 py-3 text-sm text-[#F4F6FB] outline-none transition focus:border-[#FFC93C]/60 focus:ring-1 focus:ring-[#FFC93C]/40 [color-scheme:dark]"
+                        className="w-full rounded-xl border border-white/10 bg-[#0B1120] px-4 py-3 text-sm text-[#F4F6FB] outline-none transition focus:border-[#FFC93C]/60 focus:ring-1 focus:ring-[#FFC93C]/40 scheme-dark"
                       />
                     </div>
                   </div>

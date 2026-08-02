@@ -29,10 +29,22 @@ export default function Footer() {
   ];
 
   const socialIcons = [
-    FaFacebookF,
-    FaInstagram,
-    FaWhatsapp,
-    FaYoutube,
+    {
+      icon: FaFacebookF,
+      link: "https://www.facebook.com/yourpage",
+    },
+    {
+      icon: FaInstagram,
+      link: "https://www.instagram.com/waytaxi24",
+    },
+    {
+      icon: FaWhatsapp,
+      link: "https://wa.me/919500008304",
+    },
+    {
+      icon: FaYoutube,
+      link: "#",
+    },
   ];
 
   return (
@@ -61,16 +73,17 @@ export default function Footer() {
 
             <div className="mt-7 flex gap-3">
 
-              {socialIcons.map((Icon, index) => (
+              {socialIcons.map(({ icon: Icon, link }, index) => (
                 <a
                   key={index}
-                  href="#"
+                  href={link}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="group flex h-11 w-11 items-center justify-center rounded-full border border-white/10 bg-white/5 transition-all duration-300 hover:-translate-y-1 hover:border-yellow-400 hover:bg-yellow-400"
                 >
                   <Icon className="text-white transition group-hover:text-black" />
                 </a>
               ))}
-
             </div>
 
           </div>
