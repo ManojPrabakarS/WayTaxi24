@@ -4,7 +4,7 @@ import Contact2 from "./Contact2"
 import Contact3 from "./Contact3"
 import Contact4 from "./Contact4"
 import Contact5 from "./Contact5"
-import Contact6 from "./Comntact6"
+import Contact6 from "./Contact6"
 
 export default function Contact() {
   return (
