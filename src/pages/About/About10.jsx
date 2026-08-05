@@ -82,7 +82,7 @@ export default function About10() {
             </h3>
 
             <p className="mt-3 text-gray-300">
-              +91 98765 43210
+              +91 95000 08304
             </p>
           </motion.div>
 
@@ -99,7 +99,7 @@ export default function About10() {
             </h3>
 
             <p className="mt-3 text-gray-300">
-              support@waytaxi24.com
+              waytaxi24@gmail.com
             </p>
           </motion.div>
 

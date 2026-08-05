@@ -8,8 +8,8 @@ export default function About1() {
     <motion.section
   initial={{ scale: 1.15 }}
   animate={{ scale: 1 }}
-  transition={{ duration: 8, ease: "easeOut" }}
-  className="relative flex min-h-[65vh] items-center justify-center overflow-hidden bg-cover bg-center"
+  transition={{ duration: 5, ease: "easeOut" }}
+  className="relative flex min-h-[75vh] items-center justify-center overflow-hidden bg-cover bg-center"
   style={{ backgroundImage: `url(${aboutBg})` }}
 >
       {/* Overlay */}

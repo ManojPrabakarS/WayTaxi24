@@ -14,11 +14,11 @@ export default function About() {
     <main className="bg-white overflow-hidden">
       <About1 />
       <About2 />
+      <About6 />
       <About3 />
       
-      <About5 />
-      <About6 />
-      <About7 />
+      {/* <About5 /> */}
+      {/* <About7 /> */}
       <About8 />
       <About9 />
       <About10 />
