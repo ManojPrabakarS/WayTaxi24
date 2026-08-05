@@ -61,7 +61,7 @@ export default function Contact3() {
 
   return (
 
-    <section className="overflow-hidden bg-[#071016] py-16 md:py-20 lg:py-24">
+    <section className="overflow-hidden bg-[#f0f0f0] py-16 md:py-20 lg:py-24">
 
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-10">
 
@@ -73,7 +73,7 @@ export default function Contact3() {
 
           </span>
 
-          <h2 className="map-title mt-4 text-3xl sm:text-4xl lg:text-5xl font-bold leading-tight text-white opacity-0">
+          <h2 className="map-title mt-4 text-3xl sm:text-4xl lg:text-5xl font-bold leading-tight text-black opacity-0">
 
             We Travel Across
             <span className="text-[#FBBF24]">
@@ -82,7 +82,7 @@ export default function Contact3() {
 
           </h2>
 
-          <p className="mx-auto mt-5 max-w-3xl text-base sm:text-lg leading-7 sm:leading-8 text-gray-300">
+          <p className="mx-auto mt-5 max-w-3xl text-base sm:text-lg leading-7 sm:leading-8 text-gray-800">
 
             Wherever your destination is,
             WayTaxi24 is ready to take you there
@@ -104,16 +104,16 @@ export default function Contact3() {
 
                 <div
                   key={index}
-                  className="map-card opacity-0 flex items-center gap-4 rounded-2xl border border-white/10 bg-white/5 p-4 sm:p-5 transition-all duration-300 hover:-translate-y-2 hover:border-[#FBBF24]"
+                  className="map-card opacity-0 flex items-center gap-4 rounded-2xl border border-white/10 bg-black/8 p-4 sm:p-5 transition-all duration-300 hover:-translate-y-2 hover:border-[#FBBF24]"
                 >
 
-                  <div className="flex h-11 w-11 sm:h-12 sm:w-12 flex-shrink-0 items-center justify-center rounded-full bg-[#FBBF24] text-black">
+                  <div className="flex h-11 w-11 sm:h-12 sm:w-12 shrink-0 items-center justify-center rounded-full bg-[#FBBF24] text-black">
 
                     <FaLocationArrow />
 
                   </div>
 
-                  <span className="text-sm sm:text-base font-medium text-white">
+                  <span className="text-sm sm:text-base font-medium text-black">
 
                     {city}
 
@@ -149,15 +149,7 @@ export default function Contact3() {
 
                   </p>
 
-                  <a
-                    href="tel:+919944817224"
-                    className="mt-5 inline-flex w-full sm:w-auto justify-center items-center gap-3 rounded-full bg-black px-6 sm:px-8 py-3 text-white transition-all duration-300 hover:bg-[#071016]">
-
-                    <FaPhoneAlt />
-
-                    +91 99448 17224
-
-                  </a>
+               
 
                 </div>
 

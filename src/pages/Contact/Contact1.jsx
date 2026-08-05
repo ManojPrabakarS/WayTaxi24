@@ -54,23 +54,23 @@ export default function Contact1() {
   }, []);
 
   return (
-   <section
-  className="relative flex min-h-[80vh] md:min-h-screen items-center overflow-hidden bg-cover bg-center pt-24 md:pt-28"
-  style={{
-    backgroundImage: `url(${contactBg})`,
-  }}
->
+    <section
+      className="relative flex min-h-[80vh] md:min-h-screen items-center overflow-hidden bg-cover bg-center pt-24 md:pt-28"
+      style={{
+        backgroundImage: `url(${contactBg})`,
+      }}
+    >
       {/* Overlay */}
 
       <div className="absolute inset-0 bg-black/70"></div>
 
       {/* Floating Icon */}
 
-     <div className="floating-phone absolute right-6 top-24 hidden xl:block">
-  <div className="flex h-24 w-24 items-center justify-center rounded-full bg-[#FBBF24]/20 backdrop-blur-md border border-[#FBBF24]/30">
+      <div className="floating-phone absolute right-6 top-24 hidden xl:block">
+        {/* <div className="flex h-24 w-24 items-center justify-center rounded-full bg-[#FBBF24]/20 backdrop-blur-md border border-[#FBBF24]/30">
     <FaPhoneAlt className="text-5xl text-[#FBBF24]" />
-  </div>
-</div>
+  </div> */}
+      </div>
 
       {/* Content */}
 
@@ -78,19 +78,19 @@ export default function Contact1() {
 
         {/* Breadcrumb */}
 
-      <span className="contact-badge inline-block rounded-full bg-[#FBBF24] px-5 py-2 text-xs sm:text-sm font-semibold uppercase tracking-[2px] sm:tracking-[3px] text-black opacity-0">
-  Home / Contact
-</span>
+        <span className="contact-badge inline-block rounded-full bg-[#FBBF24] px-5 py-2 text-xs sm:text-sm font-semibold uppercase tracking-[2px] sm:tracking-[3px] text-black opacity-0">
+          Home / Contact
+        </span>
 
         {/* Heading */}
 
         <h1 className="contact-title mt-6 max-w-4xl text-4xl font-extrabold leading-tight text-white opacity-0 sm:text-5xl md:text-6xl lg:text-7xl">
-  Get In Touch
-  <br />
-  <span className="text-[#FBBF24]">
-    Book Your Taxi Today
-  </span>
-</h1>
+          Get In Touch
+          <br />
+          <span className="text-[#FBBF24]">
+            Book Your Taxi Today
+          </span>
+        </h1>
 
         {/* Description */}
 

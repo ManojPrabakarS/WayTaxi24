@@ -9,13 +9,13 @@ import Contact6 from "./Contact6"
 export default function Contact() {
   return (
     <>
-    <Contactform/>
+    {/* <Contactform/> */}
     <Contact1/>
     <Contact2/>
     <Contact3/>
-    <Contact4/>
-    <Contact5/>
-    <Contact6/>
+    {/* <Contact4/> */}
+    {/* <Contact5/> */}
+    {/* <Contact6/> */}
     </>
   )
 }

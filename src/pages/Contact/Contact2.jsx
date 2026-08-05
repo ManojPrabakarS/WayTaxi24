@@ -41,8 +41,8 @@ export default function Contact2() {
     });
 
   }, []);
-  
-  
+
+
 
   return (
 
@@ -62,7 +62,7 @@ export default function Contact2() {
 
             </span>
 
-           <h2 className="mt-4 text-3xl sm:text-4xl lg:text-5xl font-bold leading-tight text-[#071016]">
+            <h2 className="mt-4 text-3xl sm:text-4xl lg:text-5xl font-bold leading-tight text-[#071016]">
 
               Let's Talk About
               <br />
@@ -71,7 +71,7 @@ export default function Contact2() {
 
             </h2>
 
-           <p className="mt-5 text-base sm:text-lg text-gray-600 leading-7 sm:leading-8">
+            <p className="mt-5 text-base sm:text-lg text-gray-600 leading-7 sm:leading-8">
 
               Need an airport transfer, outstation taxi,
               corporate cab or local ride?
@@ -117,7 +117,7 @@ export default function Contact2() {
 
                 <div>
 
-                <h4 className="text-lg sm:text-xl font-bold">
+                  <h4 className="text-lg sm:text-xl font-bold">
 
                     Phone
 
@@ -125,7 +125,7 @@ export default function Contact2() {
 
                   <p className="text-sm sm:text-base text-gray-600">
 
-                    +91 99448 17224
+                    +91 95000 08304
 
                   </p>
 
@@ -135,7 +135,7 @@ export default function Contact2() {
 
               <div className="contact-card opacity-0 flex items-start sm:items-center gap-4 sm:gap-5 rounded-2xl sm:rounded-3xl bg-white p-4 sm:p-6 shadow-lg transition-all duration-300 hover:-translate-y-2 hover:shadow-xl">
 
-               <div className="flex h-14 w-14 sm:h-16 sm:w-16 flex-shrink-0 items-center justify-center rounded-xl sm:rounded-2xl bg-[#FBBF24] text-xl sm:text-2xl">
+                <div className="flex h-14 w-14 sm:h-16 sm:w-16 shrink-0 items-center justify-center rounded-xl sm:rounded-2xl bg-[#FBBF24] text-xl sm:text-2xl">
 
                   <FaEnvelope />
 
@@ -143,15 +143,15 @@ export default function Contact2() {
 
                 <div>
 
-                 <h4 className="text-lg sm:text-xl font-bold">
+                  <h4 className="text-lg sm:text-xl font-bold">
 
                     Email
 
                   </h4>
 
-                <p className="text-sm sm:text-base text-gray-600 break-all">
-  support@waytaxi24.com
-</p>
+                  <p className="text-sm sm:text-base text-gray-600 break-all">
+                    waytaxi24@gmail.com
+                  </p>
 
                 </div>
 
@@ -173,7 +173,7 @@ export default function Contact2() {
 
                   </h4>
 
-                 <p className="text-sm sm:text-base text-gray-600">
+                  <p className="text-sm sm:text-base text-gray-600">
 
                     24 Hours • 7 Days
 
